@@ -1,0 +1,6 @@
+{
+  "name": "Elite Vanguard Leadership Group",
+  "description": "Veteran-led executive management consulting and leadership development firm translating time-tested military principles into high-performance commercial and operational excellence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
