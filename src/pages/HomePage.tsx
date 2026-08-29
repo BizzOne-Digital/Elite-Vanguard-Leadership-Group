@@ -7,15 +7,15 @@ import { OperationalReadinessDiagnostic } from '../components/OperationalReadine
 import { DeploymentRoadmap } from '../components/DeploymentRoadmap';
 import { MethodologyComparison } from '../components/MethodologyComparison';
 import { CaseScenarios } from '../components/CaseScenarios';
-import { 
-  Shield, 
-  ArrowRight, 
-  CheckCircle2, 
-  Compass, 
-  Layers, 
-  Target, 
-  Users, 
-  Building2, 
+import {
+  Shield,
+  ArrowRight,
+  CheckCircle2,
+  Compass,
+  Layers,
+  Target,
+  Users,
+  Building2,
   Award,
   ChevronRight,
   Phone,
@@ -178,12 +178,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="lg:col-span-5 relative">
               <div className="relative border border-[#222222] p-2 bg-[#111111] rounded-xl shadow-2xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1000&q=80"
+                  src="https://images.pexels.com/photos/36766697/pexels-photo-36766697.jpeg"
                   alt="Operational Execution and Infrastructure"
                   className="w-full h-[400px] object-cover filter contrast-110 rounded-lg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-80" />
-                
+
                 {/* Floating Prestige Callout */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 bg-[#141414]/95 border border-[#222222] rounded-lg backdrop-blur-md">
                   <span className="block text-[10px] font-mono tracking-widest uppercase text-[#C5A059] mb-1">
