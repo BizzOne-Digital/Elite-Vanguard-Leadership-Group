@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PageId } from '../types';
-import { Shield, CheckCircle2, ArrowRight, RotateCcw, AlertTriangle, Sparkles, TrendingUp } from 'lucide-react';
+import { CheckCircle2, ArrowRight, RotateCcw, AlertTriangle, Sparkles, TrendingUp } from 'lucide-react';
 import { CTAButton } from './CTAButton';
 
 interface DiagnosticQuestion {
@@ -247,7 +247,7 @@ export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagno
             <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#C5A059] block">
               Frontline Execution Index
             </span>
-            
+
             {/* Visual Gauge Display */}
             <div className="relative inline-flex items-center justify-center">
               <div className="w-32 h-32 rounded-full border-4 border-[#222222] bg-[#141414] flex flex-col items-center justify-center shadow-inner">

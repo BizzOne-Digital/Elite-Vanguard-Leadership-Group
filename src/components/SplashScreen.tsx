@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield } from 'lucide-react';
+
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -76,8 +76,8 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete, forceSho
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,#101A2B_0%,#0A111D_100%)] opacity-90" />
 
         {/* Very subtle architectural geometric grid lines */}
-        <div 
-          className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#C2AA78_1px,transparent_1px),linear-gradient(to_bottom,#C2AA78_1px,transparent_1px)] bg-[size:5rem_5rem]" 
+        <div
+          className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#C2AA78_1px,transparent_1px),linear-gradient(to_bottom,#C2AA78_1px,transparent_1px)] bg-[size:5rem_5rem]"
         />
 
         {/* Vignette Shadow */}
@@ -97,9 +97,9 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete, forceSho
           <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl border border-[#A88A52]/40 bg-[#101A2B] shadow-2xl shadow-black/80 flex items-center justify-center group overflow-hidden">
             {/* Subtle inner sheen */}
             <div className="absolute inset-0 bg-gradient-to-tr from-[#A88A52]/15 via-transparent to-transparent opacity-60" />
-            
-            {/* Insignia Shield */}
-            <Shield className="w-8 h-8 sm:w-10 sm:h-10 text-[#C2AA78] transition-transform duration-500" strokeWidth={1.5} />
+
+            {/* Insignia Logo */}
+            <img src="/image/logo.png" alt="Elite Vanguard" className="w-8 h-8 sm:w-10 sm:h-10 rounded object-cover" />
 
             {/* Corner Precision Accents */}
             <div className="absolute top-1 left-1 w-1.5 h-1.5 border-t border-l border-[#C2AA78]/50" />

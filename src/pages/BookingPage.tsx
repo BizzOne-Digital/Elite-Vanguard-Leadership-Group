@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { PageId, ConsultationRequest } from '../types';
 import { COMPANY_INFO, TARGET_INDUSTRIES } from '../data/content';
 import { CTAButton } from '../components/CTAButton';
-import { 
-  Shield, 
-  Phone, 
-  Mail, 
-  Calendar, 
-  Clock, 
-  CheckCircle2, 
-  Building2, 
-  User, 
-  Briefcase, 
+import {
+
+  Phone,
+  Mail,
+  Calendar,
+  Clock,
+  CheckCircle2,
+  Building2,
+  User,
+  Briefcase,
   MessageSquare,
   Lock,
   ArrowRight
@@ -104,26 +104,24 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
 
                 <div>
                   <span className="block text-[10px] uppercase tracking-wider text-[#C5A059]">Direct Phone</span>
-                  <a
+                  <div
                     id="booking-sidebar-phone"
-                    href={COMPANY_INFO.phoneLink}
-                    className="inline-flex items-center gap-2 text-sm font-mono text-white hover:text-[#C5A059] transition-colors mt-0.5"
+                    className="inline-flex items-center gap-2 text-sm font-mono text-slate-400 mt-0.5"
                   >
-                    <Phone className="w-4 h-4 text-[#C5A059]" />
-                    <span>{COMPANY_INFO.phoneFormatted}</span>
-                  </a>
+                    <Phone className="w-4 h-4 text-slate-500" />
+                    <span>[Phone - TBD]</span>
+                  </div>
                 </div>
 
                 <div>
                   <span className="block text-[10px] uppercase tracking-wider text-[#C5A059]">Confidential Email</span>
-                  <a
+                  <div
                     id="booking-sidebar-email"
-                    href={`mailto:${COMPANY_INFO.email}`}
-                    className="inline-flex items-center gap-2 text-sm text-white hover:text-[#C5A059] transition-colors mt-0.5 break-all"
+                    className="inline-flex items-center gap-2 text-sm text-slate-400 mt-0.5 break-all"
                   >
-                    <Mail className="w-4 h-4 text-[#C5A059] shrink-0" />
-                    <span>{COMPANY_INFO.email}</span>
-                  </a>
+                    <Mail className="w-4 h-4 text-slate-500 shrink-0" />
+                    <span>[Email - TBD]</span>
+                  </div>
                 </div>
               </div>
 
@@ -164,7 +162,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                   <div className="w-16 h-16 mx-auto rounded-full border-2 border-[#C5A059] bg-[#1A1A1A] flex items-center justify-center">
                     <CheckCircle2 className="w-8 h-8 text-[#C5A059]" />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <span className="text-xs font-mono uppercase tracking-widest text-[#C5A059]">
                       Consultation Request Received
@@ -447,7 +445,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
 
                   <div className="pt-4 border-t border-[#222222] flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="text-xs text-slate-400 flex items-center gap-1.5">
-                      <Shield className="w-4 h-4 text-[#C5A059]" />
+                      <img src="/image/logo.png" alt="Elite Vanguard" className="w-4 h-4 rounded" />
                       <span>Confidentiality & Executive Discretion Guaranteed</span>
                     </div>
 

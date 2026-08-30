@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PageId } from '../types';
-import { Shield, Search, Compass, Users, CheckCircle2, ChevronRight, Award, Zap } from 'lucide-react';
+import { Search, Compass, Users, CheckCircle2, ChevronRight, Award, Zap } from 'lucide-react';
 import { CTAButton } from './CTAButton';
 
 interface RoadmapPhase {

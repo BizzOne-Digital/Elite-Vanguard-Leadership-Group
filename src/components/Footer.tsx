@@ -2,7 +2,7 @@ import React from 'react';
 import { PageId } from '../types';
 import { COMPANY_INFO, TARGET_INDUSTRIES } from '../data/content';
 import { CTAButton } from './CTAButton';
-import { Shield, Phone, Mail, ArrowUpRight } from 'lucide-react';
+import { Phone, Mail, ArrowUpRight } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: PageId) => void;
@@ -46,14 +46,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
               >
                 Book a Consultation
               </CTAButton>
-              <a
-                id="footer-banner-phone"
-                href={COMPANY_INFO.phoneLink}
-                className="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-widest text-[#C5A059] hover:text-white py-2 transition-colors"
-              >
+              <div className="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-widest text-slate-500 py-2">
                 <Phone className="w-3.5 h-3.5" />
-                <span>Direct: {COMPANY_INFO.phoneFormatted}</span>
-              </a>
+                <span>Direct: [Phone Number - TBD]</span>
+              </div>
             </div>
           </div>
         </div>
@@ -65,9 +61,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
           {/* Col 1: Brand & Mission */}
           <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 border border-[#222222] bg-[#111111] rounded-lg flex items-center justify-center">
-                <Shield className="w-5 h-5 text-[#C5A059]" />
-              </div>
+            <img src="/image/logo.png" alt="Elite Vanguard Logo" className="flex-shrink-0 w-20 h-20 rounded-lg object-cover object-center" />
               <div>
                 <span className="block font-serif text-xl font-bold tracking-wider text-white uppercase">
                   Elite Vanguard
@@ -142,7 +136,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
             <h4 className="font-serif text-sm font-bold tracking-widest uppercase text-[#C5A059] border-b border-[#222222] pb-2">
               Direct Contact
             </h4>
-            
+
             <div className="space-y-3 text-xs sm:text-sm text-slate-300">
               <div>
                 <span className="block text-[10px] uppercase tracking-wider text-slate-500">Leadership Contact</span>
@@ -151,26 +145,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
 
               <div>
                 <span className="block text-[10px] uppercase tracking-wider text-slate-500">Direct Telephone</span>
-                <a
-                  id="footer-phone-link"
-                  href={COMPANY_INFO.phoneLink}
-                  className="inline-flex items-center gap-2 text-white hover:text-[#C5A059] transition-colors mt-0.5"
-                >
-                  <Phone className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>{COMPANY_INFO.phoneFormatted}</span>
-                </a>
+                <div className="inline-flex items-center gap-2 text-slate-400 mt-0.5">
+                  <Phone className="w-3.5 h-3.5 text-slate-500" />
+                  <span>[Phone Number - TBD]</span>
+                </div>
               </div>
 
               <div>
                 <span className="block text-[10px] uppercase tracking-wider text-slate-500">Confidential Inquiries</span>
-                <a
-                  id="footer-email-link"
-                  href={`mailto:${COMPANY_INFO.email}`}
-                  className="inline-flex items-center gap-2 text-white hover:text-[#C5A059] transition-colors mt-0.5 break-all"
-                >
-                  <Mail className="w-3.5 h-3.5 text-[#C5A059] shrink-0" />
-                  <span>{COMPANY_INFO.email}</span>
-                </a>
+                <div className="inline-flex items-center gap-2 text-slate-400 mt-0.5 break-all">
+                  <Mail className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+                  <span>[Email Address - TBD]</span>
+                </div>
               </div>
             </div>
 

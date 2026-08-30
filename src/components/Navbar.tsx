@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { PageId } from '../types';
 import { COMPANY_INFO } from '../data/content';
 import { CTAButton } from './CTAButton';
-import { Menu, X, Shield, Phone } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: PageId;
@@ -58,9 +58,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             onClick={() => handleNavClick('home')}
             className="flex items-center gap-3.5 text-left group cursor-pointer focus:outline-none"
           >
-            <div className="w-10 h-10 border border-[#222222] bg-[#111111] rounded-lg flex items-center justify-center transition-all duration-300 group-hover:border-[#C5A059] group-hover:bg-[#141414] shadow-sm">
-              <Shield className="w-5 h-5 text-[#C5A059] group-hover:text-white transition-colors" />
-            </div>
+            <img src="/image/logo.png" alt="Elite Vanguard Logo" className="flex-shrink-0 w-20 h-20 rounded-lg object-cover object-center transition-all duration-300 shadow-sm" />
             <div className="flex flex-col">
               <span className="font-serif text-lg sm:text-xl font-bold tracking-widest text-white uppercase group-hover:text-[#C5A059] transition-colors leading-tight">
                 Elite Vanguard
@@ -97,15 +95,14 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
           {/* Desktop Right Actions: Phone + Primary CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
+            <div
               id="nav-quick-phone"
-              href={COMPANY_INFO.phoneLink}
-              className="flex items-center gap-2 text-xs tracking-wider text-slate-400 hover:text-[#C5A059] transition-colors py-1.5 px-3 rounded-lg border border-[#222222] bg-[#111111]"
-              title="Call Walter directly"
+              className="flex items-center gap-2 text-xs tracking-wider text-slate-500 py-1.5 px-3 rounded-lg border border-[#222222] bg-[#111111]"
+              title="Phone number - TBD"
             >
-              <Phone className="w-3.5 h-3.5 text-[#C5A059]" />
-              <span className="font-mono text-xs text-slate-300">{COMPANY_INFO.phoneFormatted}</span>
-            </a>
+              <Phone className="w-3.5 h-3.5 text-slate-500" />
+              <span className="font-mono text-xs text-slate-400">[Phone - TBD]</span>
+            </div>
 
             <CTAButton
               id="nav-cta-consultation"
@@ -170,14 +167,13 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             })}
 
             <div className="pt-6 mt-4 border-t border-[#222222] flex flex-col gap-4">
-              <a
+              <div
                 id="mobile-phone-link"
-                href={COMPANY_INFO.phoneLink}
-                className="flex items-center gap-3 text-sm text-slate-300 hover:text-[#C5A059] px-3 py-2 bg-[#111111] rounded-lg border border-[#222222]"
+                className="flex items-center gap-3 text-sm text-slate-400 px-3 py-2 bg-[#111111] rounded-lg border border-[#222222]"
               >
-                <Phone className="w-4 h-4 text-[#C5A059]" />
-                <span>Direct Contact: {COMPANY_INFO.phoneFormatted}</span>
-              </a>
+                <Phone className="w-4 h-4 text-slate-500" />
+                <span>Direct Contact: [Phone - TBD]</span>
+              </div>
 
               <CTAButton
                 id="mobile-drawer-cta"

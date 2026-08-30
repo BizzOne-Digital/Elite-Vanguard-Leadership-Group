@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { PageId } from '../types';
 import { COMPANY_INFO } from '../data/content';
 import { CTAButton } from '../components/CTAButton';
-import { 
-  Shield, 
-  Phone, 
-  Mail, 
-  User, 
-  Send, 
-  CheckCircle2, 
+import {
+  Phone,
+  Mail,
+  User,
+  Send,
+  CheckCircle2,
   Calendar,
   MessageSquare,
   Globe2
@@ -109,19 +108,18 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 {/* Telephone */}
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 border border-[#222222] bg-[#111111] rounded-lg flex items-center justify-center shrink-0">
-                    <Phone className="w-5 h-5 text-[#C5A059]" />
+                    <Phone className="w-5 h-5 text-slate-500" />
                   </div>
                   <div>
                     <span className="text-[10px] font-mono uppercase tracking-wider text-[#C5A059] block">
                       Direct Telephone
                     </span>
-                    <a
+                    <div
                       id="contact-phone-direct"
-                      href={COMPANY_INFO.phoneLink}
-                      className="text-base font-mono font-bold text-white hover:text-[#C5A059] transition-colors block mt-0.5"
+                      className="text-base font-mono font-bold text-slate-400 block mt-0.5"
                     >
-                      {COMPANY_INFO.phoneFormatted}
-                    </a>
+                      [Phone Number - TBD]
+                    </div>
                     <span className="text-xs text-slate-500">
                       Direct Line • Prompt Executive Response
                     </span>
@@ -131,19 +129,18 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 {/* Email */}
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 border border-[#222222] bg-[#111111] rounded-lg flex items-center justify-center shrink-0">
-                    <Mail className="w-5 h-5 text-[#C5A059]" />
+                    <Mail className="w-5 h-5 text-slate-500" />
                   </div>
                   <div>
                     <span className="text-[10px] font-mono uppercase tracking-wider text-[#C5A059] block">
                       Executive Email
                     </span>
-                    <a
+                    <div
                       id="contact-email-direct"
-                      href={`mailto:${COMPANY_INFO.email}`}
-                      className="text-sm font-sans font-medium text-white hover:text-[#C5A059] transition-colors block mt-0.5 break-all"
+                      className="text-sm font-sans font-medium text-slate-400 block mt-0.5 break-all"
                     >
-                      {COMPANY_INFO.email}
-                    </a>
+                      [Email Address - TBD]
+                    </div>
                     <span className="text-xs text-slate-500">
                       Confidential Strategic Communications
                     </span>

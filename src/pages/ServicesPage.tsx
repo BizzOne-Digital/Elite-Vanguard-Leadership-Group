@@ -4,13 +4,13 @@ import { SERVICE_CATEGORIES, TARGET_INDUSTRIES } from '../data/content';
 import { SectionHeader } from '../components/SectionHeader';
 import { CTAButton } from '../components/CTAButton';
 import { DeploymentRoadmap } from '../components/DeploymentRoadmap';
-import { 
-  Shield, 
-  ArrowRight, 
-  CheckCircle2, 
-  Layers, 
-  Target, 
-  Briefcase, 
+import {
+
+  ArrowRight,
+  CheckCircle2,
+  Layers,
+  Target,
+  Briefcase,
   Award,
   ChevronRight,
   Sparkles
@@ -48,7 +48,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="border border-[#222222] bg-[#141414] rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <Shield className="w-5 h-5 text-[#C5A059] shrink-0" />
+            <img src="/image/logo.png" alt="Elite Vanguard" className="w-5 h-5 rounded shrink-0" />
             <p className="text-xs text-slate-300 font-mono">
               <span className="text-[#C5A059] font-bold">FRAMEWORK NOTICE:</span> Practice areas are structured based on firm positioning and target domains. Custom corporate scopes and tailored curriculums are finalized during the diagnostic engagement.
             </p>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageId } from '../types';
-import { Shield, XCircle, CheckCircle2, ArrowRight } from 'lucide-react';
+import { XCircle, CheckCircle2, ArrowRight } from 'lucide-react';
 import { CTAButton } from './CTAButton';
 
 interface ComparisonRow {
@@ -69,7 +69,7 @@ export const MethodologyComparison: React.FC<MethodologyComparisonProps> = ({ on
           <div className="col-span-3">Operational Dimension</div>
           <div className="col-span-4 text-slate-400">Traditional Corporate Seminars</div>
           <div className="col-span-5 text-[#C5A059] font-bold flex items-center gap-1.5">
-            <Shield className="w-3.5 h-3.5" />
+            <img src="/image/logo.png" alt="Elite Vanguard" className="w-3.5 h-3.5 rounded" />
             <span>The Elite Vanguard Standard</span>
           </div>
         </div>
@@ -115,7 +115,7 @@ export const MethodologyComparison: React.FC<MethodologyComparisonProps> = ({ on
       {/* Footer CTA */}
       <div className="pt-4 border-t border-[#222222] flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-xs text-slate-400 flex items-center gap-2">
-          <Shield className="w-4 h-4 text-[#C5A059] shrink-0" />
+          <img src="/image/logo.png" alt="Elite Vanguard" className="w-4 h-4 rounded shrink-0" />
           <span>Proven leadership principles engineered for commercial and frontline excellence.</span>
         </div>
 

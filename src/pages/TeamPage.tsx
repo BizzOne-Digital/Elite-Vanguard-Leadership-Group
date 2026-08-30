@@ -3,7 +3,7 @@ import { PageId } from '../types';
 import { FOUNDER_PROFILES, COMPANY_INFO } from '../data/content';
 import { SectionHeader } from '../components/SectionHeader';
 import { CTAButton } from '../components/CTAButton';
-import { Shield, Award, CheckCircle, UserCheck, ArrowRight, Phone } from 'lucide-react';
+import { Award, CheckCircle, UserCheck, ArrowRight, Phone } from 'lucide-react';
 
 interface TeamPageProps {
   onNavigate: (page: PageId) => void;
@@ -16,7 +16,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onNavigate }) => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-20">
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 border border-[#222222] rounded text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-[#C5A059] bg-[#141414]">
-            <Shield className="w-3.5 h-3.5" />
+            <img src="/image/logo.png" alt="Elite Vanguard" className="w-3.5 h-3.5 rounded" />
             Executive Leadership & Co-Founders
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white tracking-tight leading-tight">
@@ -161,13 +161,12 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onNavigate }) => {
           >
             Book a Consultation
           </CTAButton>
-          <a
-            href={COMPANY_INFO.phoneLink}
-            className="inline-flex items-center gap-2 px-6 py-3 border border-[#222222] hover:border-[#C5A059] rounded-lg bg-[#141414] text-xs font-medium uppercase tracking-widest text-slate-300 hover:text-white transition-all"
+          <div
+            className="inline-flex items-center gap-2 px-6 py-3 border border-[#222222] rounded-lg bg-[#141414] text-xs font-medium uppercase tracking-widest text-slate-400"
           >
-            <Phone className="w-4 h-4 text-[#C5A059]" />
-            <span>Call: {COMPANY_INFO.phoneFormatted}</span>
-          </a>
+            <Phone className="w-4 h-4 text-slate-500" />
+            <span>Call: [Phone - TBD]</span>
+          </div>
         </div>
       </section>
     </div>

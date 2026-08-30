@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PageId } from '../types';
-import { Shield, TrendingUp, CheckCircle2, Building2, Truck, Wrench, ChevronRight } from 'lucide-react';
+import { TrendingUp, CheckCircle2, Building2, Truck, Wrench, ChevronRight } from 'lucide-react';
 import { CTAButton } from './CTAButton';
 
 interface CaseStudy {

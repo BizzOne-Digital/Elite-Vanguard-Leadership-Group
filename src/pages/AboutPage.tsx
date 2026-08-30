@@ -3,7 +3,7 @@ import { PageId } from '../types';
 import { COMPANY_INFO, CORE_VALUES } from '../data/content';
 import { SectionHeader } from '../components/SectionHeader';
 import { CTAButton } from '../components/CTAButton';
-import { Shield, Target, Compass, Award, CheckCircle, ArrowRight } from 'lucide-react';
+import { Target, Compass, Award, CheckCircle, ArrowRight } from 'lucide-react';
 
 interface AboutPageProps {
   onNavigate: (page: PageId) => void;
@@ -16,7 +16,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24">
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 border border-[#222222] rounded text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-[#C5A059] bg-[#141414]">
-            <Shield className="w-3.5 h-3.5" />
+            <img src="/image/logo.png" alt="Elite Vanguard" className="w-3.5 h-3.5 rounded" />
             Institutional Background & Philosophy
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white tracking-tight leading-tight">

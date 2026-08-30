@@ -124,8 +124,8 @@ export const FOUNDER_PROFILES: FounderProfile[] = [
   {
     id: "walter-horton",
     name: "Walter Horton",
-    role: "Co-Founder & Executive Consultant",
-    badge: "U.S. Army Veteran • The Old Guard",
+    role: "Co-Founder & US Army veteran",
+    badge: "",
     // Verbatim Biography (DO NOT MODIFY)
     bio: "Leadership is foundational for Walter Horton, born from early mentorship under his father—a master’s in physical education holder—and honed across military, corporate, municipal, and entrepreneurial sectors. A decorated U.S. Army veteran, Walter earned his leadership certification in 1986 in Baumholder, West Germany, before serving as cadre in Bad Kreuznach, where he directed daily operations for 35 to 80 newly arrived troops under the command of Lt. Gen. Calvin Waller and Gen. Colin Powell. He was personally selected by Command Sergeant Major Maurice Zepeda for assignment to the prestigious 3rd U.S. Infantry Regiment (The Old Guard) at Fort Myer, serving as an escort to the President of the United States. During the summer 1987 Twilight Tattoo on The Ellipse, Walter was recognized in formation when Secretary of State George P. Shultz—serving as Honorary Reviewing Officer on behalf of President Reagan—walked the ranks to present him with the regimental crest pin. Walter seamlessly transitioned this operational discipline into the private sector, driving key initiatives for private equity firms in Washington, D.C. and New York, before serving as Supervisor of Transportation at NYC’s Jacobi Hospital, managing a 38-person team. After relocating to Maryland, he launched his own successful business enterprise and was inducted into the Rotary Club of Midtown Baltimore by his mentor, real estate mogul J.R. Owens—continuing a lifelong legacy of driving team success, accountability, and community leadership.",
     image: "./public/image/walter.jpg",
@@ -142,8 +142,8 @@ export const FOUNDER_PROFILES: FounderProfile[] = [
   {
     id: "trevor-mcleod",
     name: "Trevor McLeod",
-    role: "Co-Founder & Operational Consultant",
-    badge: "U.S. Army Veteran • IBEW Local #3 Journeyperson",
+    role: "Co-Founder & US Army veteran",
+    badge: "",
     // Verbatim Biography (DO NOT MODIFY)
     bio: "Trevor McLeod is a U.S. Army veteran, retired Local Union #3 International Brotherhood of Electrical Workers Journeyperson, and dedicated community leader defined by his service, mentorship, and work ethic. Throughout a distinguished trade career, Trevor led complex infrastructure and transit initiatives across New York City—including major projects on the Second Avenue Subway line and post-9/11 restoration at the Freedom Tower—frequently stepping up wherever skilled leadership was required. A Prince Hall Mason holding key positions such as Junior Warden and District Deputy Grand Patron, he consistently gives back by organizing annual NYC Kidney and Prostate Cancer walks, coaching championship Pop Warner youth football, and serving as a primary organizer for middle and high school job fairs. Even in retirement, Trevor leads by example within the electrical industry by proctoring journeyperson exams, interviewing apprentices, and actively guiding the next generation—including his son—toward excellence.",
     image: "./public/image/Trevor.jpg",
@@ -160,8 +160,8 @@ export const FOUNDER_PROFILES: FounderProfile[] = [
   {
     id: "founder-03",
     name: "Henry King",
-    role: "Co-Founder & Senior LeaderShip",
-    badge: "Executive Leadership Profile",
+    role: "Co-Founder & US Army veteran",
+    badge: "",
     bio: "Henry King brings decades of military distinction and organizational strategy to Elite Vanguard Leadership Group. A decorated U.S. Army veteran and graduate of the Drill Sergeant School and Primary Leadership Development Course (PLDC), Henry’s military service includes the Global War on Terrorism Service Medal and the National Defense Service Medal. Holding a Bachelor of Science in Industrial-Organizational Psychology, he bridges military discipline with human behavior to build resilient teams, streamline operations, and cultivate high-performance leadership.",
     image: "./public/image/henry.png",
     highlights: [
@@ -175,8 +175,8 @@ export const FOUNDER_PROFILES: FounderProfile[] = [
   {
     id: "founder-04",
     name: "Sean Norris",
-    role: "Co-Founder & Strategic Operations , Banking Industry",
-    badge: "Military Leader & Finance",
+    role: "Co-Founder & US Army veteran",
+    badge: "",
     bio: "Sean Norris is a distinguished leader with a career spanning over 30 years in the banking and finance industries. A graduate of St. John’s with a Master’s degree in Finance, he bridges deep financial acumen with practical operational leadership. He honed his command and tactical skills through rigorous military service and leadership development, graduating from the Primary Leadership Development Course (PLDC). Bilingual in Spanish, Sean excels in building global teams, optimizing financial performance, and driving market strategy. His military background provides him with a resilient approach to risk and organizational challenge, which he applies to create resilient operational frameworks and high-performance teams.",
     image: "./public/image/sean.jpg",
     highlights: [

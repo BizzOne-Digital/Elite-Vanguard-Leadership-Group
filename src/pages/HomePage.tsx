@@ -54,7 +54,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Institutional Prestige Badge */}
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 mb-8 border border-[#222222] bg-[#111111]/90 rounded-lg backdrop-blur-md shadow-lg shadow-black/40">
-            <Shield className="w-4 h-4 text-[#C5A059]" />
+
+                <img src="/image/logo.png" alt="Elite Vanguard" className="w-3.5 h-3.5 rounded" />
             <span className="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-[#C5A059]">
               Veteran-Led Executive & Operational Consulting
             </span>
@@ -108,13 +109,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
               <span className="text-[#C5A059] font-medium tracking-wider">Direct Engagement:</span>
-              <a href={COMPANY_INFO.phoneLink} className="font-mono text-white hover:text-[#C5A059]">
-                {COMPANY_INFO.phoneFormatted}
-              </a>
+              <span className="font-mono text-slate-400">
+                [Phone - TBD]
+              </span>
             </div>
             <span className="hidden sm:inline text-slate-600">|</span>
-            <span className="hidden sm:inline tracking-wider">
-              {COMPANY_INFO.contactPerson} • {COMPANY_INFO.email}
+            <span className="hidden sm:inline tracking-wider text-slate-400">
+              {COMPANY_INFO.contactPerson} • [Email - TBD]
             </span>
           </div>
 
@@ -178,7 +179,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="lg:col-span-5 relative">
               <div className="relative border border-[#222222] p-2 bg-[#111111] rounded-xl shadow-2xl overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/36766697/pexels-photo-36766697.jpeg"
+                  src="https://www.shutterstock.com/image-photo/speaker-giving-talk-conference-hall-260nw-2653698805.jpg"
                   alt="Operational Execution and Infrastructure"
                   className="w-full h-[400px] object-cover filter contrast-110 rounded-lg"
                 />
@@ -668,13 +669,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               Book a Consultation
             </CTAButton>
 
-            <a
-              href={COMPANY_INFO.phoneLink}
-              className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg border border-[#222222] bg-[#141414] text-xs uppercase tracking-widest text-white hover:text-[#C5A059] hover:border-[#C5A059] transition-all w-full sm:w-auto"
+            <div
+              className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg border border-[#222222] bg-[#141414] text-xs uppercase tracking-widest text-slate-400 w-full sm:w-auto"
             >
-              <Phone className="w-4 h-4 text-[#C5A059]" />
-              <span>Call Direct: {COMPANY_INFO.phoneFormatted}</span>
-            </a>
+              <Phone className="w-4 h-4 text-slate-500" />
+              <span>Call Direct: [Phone - TBD]</span>
+            </div>
           </div>
         </div>
       </section>
