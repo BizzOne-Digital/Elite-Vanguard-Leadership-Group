@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PageId } from '../types';
 import { TrendingUp, CheckCircle2, Building2, Truck, Wrench, ChevronRight } from 'lucide-react';
 import { CTAButton } from './CTAButton';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface CaseStudy {
   id: string;
@@ -64,6 +65,7 @@ interface CaseScenariosProps {
 }
 
 export const CaseScenarios: React.FC<CaseScenariosProps> = ({ onNavigate }) => {
+  const { t } = useLanguage();
   const [selectedCaseId, setSelectedCaseId] = useState<string>(CASE_STUDIES[0].id);
   const selectedCase = CASE_STUDIES.find((c) => c.id === selectedCaseId) || CASE_STUDIES[0];
   const IconComponent = selectedCase.icon;
@@ -74,17 +76,17 @@ export const CaseScenarios: React.FC<CaseScenariosProps> = ({ onNavigate }) => {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[#222222]">
         <div>
           <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#C5A059] block mb-1">
-            Proven Field Impact
+            {t('Proven Field Impact')}
           </span>
           <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
-            High-Consequence Operational Transformations
+            {t('High-Consequence Operational Transformations')}
           </h3>
           <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl font-light">
-            Real-world operational challenges solved through military-tested command rigor and frontline supervisor empowerment.
+            {t('Real-world operational challenges solved through military-tested command rigor and frontline supervisor empowerment.')}
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {CASE_STUDIES.map((c) => (
             <button
               key={c.id}
@@ -95,7 +97,7 @@ export const CaseScenarios: React.FC<CaseScenariosProps> = ({ onNavigate }) => {
                   : 'border-[#222222] bg-[#111111] text-slate-400 hover:text-white'
               }`}
             >
-              {c.tag.split(' ')[0]}
+              {t(c.tag).split(' ')[0]}
             </button>
           ))}
         </div>
@@ -111,10 +113,10 @@ export const CaseScenarios: React.FC<CaseScenariosProps> = ({ onNavigate }) => {
             </div>
             <div>
               <span className="text-[10px] font-mono uppercase tracking-widest text-[#C5A059] block">
-                {selectedCase.clientType}
+                {t(selectedCase.clientType)}
               </span>
               <h4 className="text-xl sm:text-2xl font-serif font-bold text-white leading-tight">
-                {selectedCase.title}
+                {t(selectedCase.title)}
               </h4>
             </div>
           </div>
@@ -123,20 +125,20 @@ export const CaseScenarios: React.FC<CaseScenariosProps> = ({ onNavigate }) => {
             {/* The Operational Challenge */}
             <div className="p-4 sm:p-5 rounded-xl border border-[#222222] bg-[#111111] space-y-2">
               <span className="text-[10px] font-mono uppercase tracking-wider text-red-400 font-bold block">
-                Initial Operational Friction
+                {t('Initial Operational Friction')}
               </span>
               <p className="text-xs text-slate-400 leading-relaxed font-light">
-                {selectedCase.challenge}
+                {t(selectedCase.challenge)}
               </p>
             </div>
 
             {/* The Vanguard Solution */}
             <div className="p-4 sm:p-5 rounded-xl border border-[#C5A059]/40 bg-[#1A1A1A] space-y-2">
               <span className="text-[10px] font-mono uppercase tracking-wider text-[#C5A059] font-bold block">
-                Elite Vanguard Deployment
+                {t('Elite Vanguard Deployment')}
               </span>
               <p className="text-xs text-slate-200 leading-relaxed font-medium">
-                {selectedCase.vanguardSolution}
+                {t(selectedCase.vanguardSolution)}
               </p>
             </div>
           </div>
@@ -145,13 +147,13 @@ export const CaseScenarios: React.FC<CaseScenariosProps> = ({ onNavigate }) => {
         {/* Right Col: Measured Outcomes */}
         <div className="lg:col-span-4 border border-[#222222] bg-[#111111] rounded-xl p-6 space-y-4">
           <span className="text-[10px] font-mono uppercase tracking-widest text-[#C5A059] block">
-            Measured Operational ROI
+            {t('Measured Operational ROI')}
           </span>
 
           <div className="space-y-3">
             {selectedCase.metrics.map((m, idx) => (
               <div key={idx} className="p-3 rounded-lg border border-[#222222] bg-[#141414] flex items-center justify-between">
-                <span className="text-xs text-slate-300 font-light">{m.label}</span>
+                <span className="text-xs text-slate-300 font-light">{t(m.label)}</span>
                 <span className="text-xl font-serif font-bold text-[#C5A059]">{m.value}</span>
               </div>
             ))}
@@ -165,7 +167,7 @@ export const CaseScenarios: React.FC<CaseScenariosProps> = ({ onNavigate }) => {
               icon="arrow"
               className="w-full justify-center"
             >
-              Request Custom Case Analysis
+              {t('Request Custom Case Analysis')}
             </CTAButton>
           </div>
         </div>

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { PageId } from '../types';
 import { COMPANY_INFO } from '../data/content';
 import { CTAButton } from './CTAButton';
+import { LanguageToggle } from './LanguageToggle';
+import { useLanguage } from '../i18n/LanguageContext';
 import { Menu, X, Phone } from 'lucide-react';
 
 interface NavbarProps {
@@ -10,6 +12,7 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -56,14 +59,14 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           <button
             id="nav-brand-logo"
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3.5 text-left group cursor-pointer focus:outline-none"
+            className="flex items-center gap-3.5 text-left group cursor-pointer focus:outline-none min-w-0 lg:min-w-max"
           >
             <img src="/image/logo.png" alt="Elite Vanguard Logo" className="flex-shrink-0 w-20 h-20 rounded-lg object-cover object-center transition-all duration-300 shadow-sm" />
-            <div className="flex flex-col">
-              <span className="font-serif text-lg sm:text-xl font-bold tracking-widest text-white uppercase group-hover:text-[#C5A059] transition-colors leading-tight">
+            <div className="flex flex-col min-w-0 lg:min-w-max">
+              <span className="font-serif text-lg sm:text-xl font-bold tracking-widest text-white uppercase group-hover:text-[#C5A059] transition-colors leading-tight max-lg:truncate">
                 Elite Vanguard
               </span>
-              <span className="text-[10px] tracking-[0.25em] uppercase text-[#C5A059] font-medium leading-tight">
+              <span className="text-[10px] tracking-[0.25em] uppercase text-[#C5A059] font-medium leading-tight max-lg:truncate">
                 Leadership Group LLC
               </span>
             </div>
@@ -84,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                       : 'text-slate-400 hover:text-white'
                   }`}
                 >
-                  {link.label}
+                  {t(link.label)}
                   {isActive && (
                     <span className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-[#C5A059] rounded-full" />
                   )}
@@ -95,6 +98,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
           {/* Desktop Right Actions: Phone + Primary CTA */}
           <div className="hidden lg:flex items-center gap-4">
+            <LanguageToggle id="nav-language-toggle" />
+
             <div
               id="nav-quick-phone"
               className="flex items-center gap-2 text-xs tracking-wider text-slate-500 py-1.5 px-3 rounded-lg border border-[#222222] bg-[#111111]"
@@ -111,29 +116,33 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
               size="sm"
               icon="arrow"
             >
-              Book a Consultation
+              {t('Book a Consultation')}
             </CTAButton>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex lg:hidden items-center gap-3">
-            <CTAButton
-              id="mobile-nav-cta-quick"
-              onClick={() => handleNavClick('booking')}
-              variant="primary-brass"
-              size="sm"
-              icon="none"
-              className="py-1.5 px-3 text-[11px]"
-            >
-              Consultation
-            </CTAButton>
+          <div className="flex lg:hidden items-center gap-2 sm:gap-3 shrink-0">
+            <LanguageToggle id="mobile-language-toggle" compact className="hidden sm:flex" />
+
+            <div className="hidden sm:flex items-center">
+              <CTAButton
+                id="mobile-nav-cta-quick"
+                onClick={() => handleNavClick('booking')}
+                variant="primary-brass"
+                size="sm"
+                icon="none"
+                className="py-1.5 px-3 text-[11px]"
+              >
+                {t('Consultation')}
+              </CTAButton>
+            </div>
 
             <button
               id="mobile-menu-toggle-btn"
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-300 hover:text-white border border-[#222222] bg-[#111111] rounded-lg focus:outline-none"
-              aria-label="Toggle navigation menu"
+              aria-label={t('Toggle navigation menu')}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -148,6 +157,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           className="lg:hidden bg-[#0A0A0A]/98 border-b border-[#222222] px-6 py-8 shadow-2xl transition-all"
         >
           <div className="flex flex-col space-y-4">
+            <div className="sm:hidden pb-2 flex">
+              <LanguageToggle id="drawer-language-toggle" />
+            </div>
+
             {navLinks.map((link) => {
               const isActive = currentPage === link.id;
               return (
@@ -161,7 +174,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                       : 'border-transparent text-slate-400 hover:text-white hover:bg-[#111111]'
                   }`}
                 >
-                  {link.label}
+                  {t(link.label)}
                 </button>
               );
             })}
@@ -172,7 +185,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                 className="flex items-center gap-3 text-sm text-slate-400 px-3 py-2 bg-[#111111] rounded-lg border border-[#222222]"
               >
                 <Phone className="w-4 h-4 text-slate-500" />
-                <span>Direct Contact: [Phone - TBD]</span>
+                <span>{t('Direct Contact: [Phone - TBD]')}</span>
               </div>
 
               <CTAButton
@@ -182,7 +195,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                 size="md"
                 className="w-full justify-center"
               >
-                Book a Consultation
+                {t('Book a Consultation')}
               </CTAButton>
             </div>
           </div>

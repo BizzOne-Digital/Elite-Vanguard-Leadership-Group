@@ -15,12 +15,14 @@ import {
   ChevronRight,
   Sparkles
 } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface ServicesPageProps {
   onNavigate: (page: PageId) => void;
 }
 
 export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
+  const { t } = useLanguage();
   const [selectedServiceId, setSelectedServiceId] = useState<string>(SERVICE_CATEGORIES[0].id);
 
   const selectedService = SERVICE_CATEGORIES.find((s) => s.id === selectedServiceId) || SERVICE_CATEGORIES[0];
@@ -32,14 +34,14 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 border border-[#222222] rounded text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-[#C5A059] bg-[#141414]">
             <Layers className="w-3.5 h-3.5" />
-            Executive Consulting Architecture
+            {t('Executive Consulting Architecture')}
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white tracking-tight leading-tight">
-            Consulting & Leadership Practice Areas
+            {t('Consulting & Leadership Practice Areas')}
           </h1>
           <div className="h-[1px] w-24 mx-auto my-6 bg-gradient-to-r from-transparent via-[#C5A059] to-transparent" />
           <p className="text-base sm:text-xl text-slate-300 font-light leading-relaxed">
-            A structured framework designed to translate battle-tested operational rigor into commercial and frontline excellence.
+            {t('A structured framework designed to translate battle-tested operational rigor into commercial and frontline excellence.')}
           </p>
         </div>
       </section>
@@ -50,7 +52,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
           <div className="flex items-center gap-3">
             <img src="/image/logo.png" alt="Elite Vanguard" className="w-5 h-5 rounded shrink-0" />
             <p className="text-xs text-slate-300 font-mono">
-              <span className="text-[#C5A059] font-bold">FRAMEWORK NOTICE:</span> Practice areas are structured based on firm positioning and target domains. Custom corporate scopes and tailored curriculums are finalized during the diagnostic engagement.
+              <span className="text-[#C5A059] font-bold">{t('FRAMEWORK NOTICE:')}</span> {t('Practice areas are structured based on firm positioning and target domains. Custom corporate scopes and tailored curriculums are finalized during the diagnostic engagement.')}
             </p>
           </div>
           <CTAButton
@@ -60,7 +62,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             icon="arrow"
             className="shrink-0"
           >
-            Custom Scope Request
+            {t('Custom Scope Request')}
           </CTAButton>
         </div>
       </section>
@@ -71,7 +73,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
           {/* Left Column: Practice Areas List */}
           <div className="lg:col-span-4 space-y-2">
             <span className="text-xs font-mono uppercase tracking-widest text-[#C5A059] block mb-3 px-2">
-              Practice Area Categories
+              {t('Practice Area Categories')}
             </span>
             {SERVICE_CATEGORIES.map((service, index) => {
               const isSelected = service.id === selectedServiceId;
@@ -90,7 +92,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
                       0{index + 1}
                     </span>
                     <span className="font-serif text-sm sm:text-base font-semibold">
-                      {service.title}
+                      {t(service.title)}
                     </span>
                   </div>
                   <ChevronRight className={`w-4 h-4 transition-transform ${isSelected ? 'text-[#C5A059] translate-x-1' : 'text-slate-600'}`} />
@@ -104,23 +106,23 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-[#222222]">
               <div>
                 <span className="text-xs font-mono uppercase tracking-widest text-[#C5A059] block mb-1">
-                  Practice Architecture
+                  {t('Practice Architecture')}
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white">
-                  {selectedService.title}
+                  {t(selectedService.title)}
                 </h2>
               </div>
               <div className="px-3 py-1 bg-[#111111] border border-[#222222] rounded text-xs font-mono text-[#C5A059]">
-                Target: {selectedService.targetAudience}
+                {t('Target:')} {t(selectedService.targetAudience)}
               </div>
             </div>
 
             <p className="text-sm sm:text-base text-[#C5A059] font-medium mb-4 italic">
-              {selectedService.subtitle}
+              {t(selectedService.subtitle)}
             </p>
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-light mb-8">
-              {selectedService.overview}
+              {t(selectedService.overview)}
             </p>
 
             {/* Focus Areas & Deliverables Grid */}
@@ -128,13 +130,13 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
               <div>
                 <h4 className="text-xs font-mono uppercase tracking-wider text-[#C5A059] font-semibold mb-3 flex items-center gap-2">
                   <Target className="w-3.5 h-3.5" />
-                  Core Focus Areas
+                  {t('Core Focus Areas')}
                 </h4>
                 <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
                   {selectedService.focusAreas.map((area, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#C5A059] shrink-0 mt-0.5" />
-                      <span>{area}</span>
+                      <span>{t(area)}</span>
                     </li>
                   ))}
                 </ul>
@@ -143,13 +145,13 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
               <div>
                 <h4 className="text-xs font-mono uppercase tracking-wider text-[#C5A059] font-semibold mb-3 flex items-center gap-2">
                   <Award className="w-3.5 h-3.5" />
-                  Key Engagement Outputs
+                  {t('Key Engagement Outputs')}
                 </h4>
                 <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
                   {selectedService.deliverables.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#C5A059] shrink-0 mt-0.5" />
-                      <span>{item}</span>
+                      <span>{t(item)}</span>
                     </li>
                   ))}
                 </ul>
@@ -158,7 +160,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
 
             <div className="mt-8 pt-6 border-t border-[#222222] flex flex-col sm:flex-row items-center justify-between gap-4">
               <span className="text-xs text-slate-500 font-mono">
-                Elite Vanguard Engagement Standard
+                {t('Elite Vanguard Engagement Standard')}
               </span>
               <CTAButton
                 onClick={() => onNavigate('booking')}
@@ -166,7 +168,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
                 size="sm"
                 icon="arrow"
               >
-                Inquire About {selectedService.title}
+                {t('Inquire About')} {t(selectedService.title)}
               </CTAButton>
             </div>
           </div>
@@ -181,9 +183,9 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
       {/* 3. TARGET AUDIENCE APPLICATION MATRIX */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <SectionHeader
-          badge="Sector Integration"
-          title="Tailored Application Across Key Domains"
-          subtitle="How our consulting services integrate into your specific industry requirements."
+          badge={t('Sector Integration')}
+          title={t('Tailored Application Across Key Domains')}
+          subtitle={t('How our consulting services integrate into your specific industry requirements.')}
           align="center"
           theme="dark"
         />
@@ -197,10 +199,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
                   <Briefcase className="w-4 h-4 text-[#C5A059]" />
                 </div>
                 <h3 className="font-serif text-lg font-bold text-white mb-2">
-                  {ind.title}
+                  {t(ind.title)}
                 </h3>
                 <p className="text-xs text-slate-400 mb-4 leading-relaxed">
-                  {ind.description}
+                  {t(ind.description)}
                 </p>
               </div>
 
@@ -209,7 +211,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('booking')}
                   className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-[#C5A059] hover:text-white transition-colors cursor-pointer"
                 >
-                  <span>Request Sector Proposal</span>
+                  <span>{t('Request Sector Proposal')}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -221,10 +223,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
       {/* Final Services CTA */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 border-t border-[#222222]">
         <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
-          Initiate an Executive Practice Consultation
+          {t('Initiate an Executive Practice Consultation')}
         </h2>
         <p className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto mb-8 font-light">
-          Discuss your organization’s operational challenges, supervisory development needs, and customized leadership academy formats.
+          {t('Discuss your organization’s operational challenges, supervisory development needs, and customized leadership academy formats.')}
         </p>
 
         <CTAButton
@@ -233,7 +235,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
           size="lg"
           icon="arrow"
         >
-          Book a Consultation
+          {t('Book a Consultation')}
         </CTAButton>
       </section>
     </div>

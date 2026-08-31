@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 
 interface SplashScreenProps {
@@ -7,6 +8,7 @@ interface SplashScreenProps {
 }
 
 export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete, forceShow = false }) => {
+  const { t } = useLanguage();
   const [stage, setStage] = useState<number>(1); // 1: Dark start, 2: Logo, 3: Name, 4: Divider, 5: Progress, 6: Exiting
   const [progressWidth, setProgressWidth] = useState<number>(0);
   const [isExiting, setIsExiting] = useState<boolean>(false);
@@ -61,7 +63,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete, forceSho
       id="elite-vanguard-splash-screen"
       role="status"
       aria-live="polite"
-      aria-label="Elite Vanguard Leadership Group Initializing"
+      aria-label={t('Elite Vanguard Leadership Group Initializing')}
       onClick={handleSkip}
       className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#0A111D] transition-opacity duration-700 ease-out select-none cursor-pointer ${
         isExiting ? 'opacity-0 pointer-events-none' : 'opacity-100'
@@ -156,14 +158,14 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete, forceSho
 
           {/* Understated Status Text */}
           <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.28em] uppercase text-[#A88A52] font-medium">
-            Initializing Leadership Excellence
+            {t('Initializing Leadership Excellence')}
           </span>
         </div>
       </div>
 
       {/* Understated Fast-Forward / Skip Hint */}
       <div className="absolute bottom-6 right-6 z-10 text-[9px] font-mono tracking-widest uppercase text-slate-500/60 hover:text-slate-400 transition-colors">
-        Click anywhere to continue
+        {t('Click anywhere to continue')}
       </div>
     </div>
   );

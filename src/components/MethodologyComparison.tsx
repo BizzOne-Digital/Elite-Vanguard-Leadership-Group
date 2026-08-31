@@ -2,6 +2,7 @@ import React from 'react';
 import { PageId } from '../types';
 import { XCircle, CheckCircle2, ArrowRight } from 'lucide-react';
 import { CTAButton } from './CTAButton';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface ComparisonRow {
   dimension: string;
@@ -47,18 +48,19 @@ interface MethodologyComparisonProps {
 }
 
 export const MethodologyComparison: React.FC<MethodologyComparisonProps> = ({ onNavigate }) => {
+  const { t } = useLanguage();
   return (
     <div id="methodology-comparison-card" className="border border-[#222222] bg-[#141414] rounded-2xl p-6 sm:p-10 shadow-2xl space-y-8">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-2">
         <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#C5A059] block">
-          Strategic Differentiation
+          {t('Strategic Differentiation')}
         </span>
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white">
-          Why Conventional Corporate Training Fails
+          {t('Why Conventional Corporate Training Fails')}
         </h3>
         <p className="text-xs sm:text-sm text-slate-400 font-light">
-          Compare traditional seminar models against Elite Vanguard's battle-tested operational discipline.
+          {t("Compare traditional seminar models against Elite Vanguard's battle-tested operational discipline.")}
         </p>
       </div>
 
@@ -66,11 +68,11 @@ export const MethodologyComparison: React.FC<MethodologyComparisonProps> = ({ on
       <div className="space-y-4">
         {/* Desktop Table Header */}
         <div className="hidden md:grid grid-cols-12 gap-4 pb-3 border-b border-[#222222] text-xs font-mono uppercase tracking-wider text-slate-500">
-          <div className="col-span-3">Operational Dimension</div>
-          <div className="col-span-4 text-slate-400">Traditional Corporate Seminars</div>
+          <div className="col-span-3">{t('Operational Dimension')}</div>
+          <div className="col-span-4 text-slate-400">{t('Traditional Corporate Seminars')}</div>
           <div className="col-span-5 text-[#C5A059] font-bold flex items-center gap-1.5">
             <img src="/image/logo.png" alt="Elite Vanguard" className="w-3.5 h-3.5 rounded" />
-            <span>The Elite Vanguard Standard</span>
+            <span>{t('The Elite Vanguard Standard')}</span>
           </div>
         </div>
 
@@ -83,7 +85,7 @@ export const MethodologyComparison: React.FC<MethodologyComparisonProps> = ({ on
             {/* Dimension Title */}
             <div className="md:col-span-3">
               <span className="font-serif font-bold text-sm text-white">
-                {row.dimension}
+                {t(row.dimension)}
               </span>
             </div>
 
@@ -91,10 +93,10 @@ export const MethodologyComparison: React.FC<MethodologyComparisonProps> = ({ on
             <div className="md:col-span-4 p-3 rounded-lg border border-red-950/30 bg-red-950/10 space-y-1">
               <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-red-400">
                 <XCircle className="w-3.5 h-3.5 text-red-500 shrink-0" />
-                <span>Conventional Approach</span>
+                <span>{t('Conventional Approach')}</span>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
-                {row.traditional}
+                {t(row.traditional)}
               </p>
             </div>
 
@@ -102,10 +104,10 @@ export const MethodologyComparison: React.FC<MethodologyComparisonProps> = ({ on
             <div className="md:col-span-5 p-3 rounded-lg border border-[#C5A059]/40 bg-[#1A1A1A] space-y-1 shadow-md">
               <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-[#C5A059] font-bold">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#C5A059] shrink-0" />
-                <span>Elite Vanguard Execution</span>
+                <span>{t('Elite Vanguard Execution')}</span>
               </div>
               <p className="text-xs text-slate-200 leading-relaxed font-medium">
-                {row.eliteVanguard}
+                {t(row.eliteVanguard)}
               </p>
             </div>
           </div>
@@ -116,7 +118,7 @@ export const MethodologyComparison: React.FC<MethodologyComparisonProps> = ({ on
       <div className="pt-4 border-t border-[#222222] flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-xs text-slate-400 flex items-center gap-2">
           <img src="/image/logo.png" alt="Elite Vanguard" className="w-4 h-4 rounded shrink-0" />
-          <span>Proven leadership principles engineered for commercial and frontline excellence.</span>
+          <span>{t('Proven leadership principles engineered for commercial and frontline excellence.')}</span>
         </div>
 
         <CTAButton
@@ -125,7 +127,7 @@ export const MethodologyComparison: React.FC<MethodologyComparisonProps> = ({ on
           size="sm"
           icon="arrow"
         >
-          Request Operational Consultation
+          {t('Request Operational Consultation')}
         </CTAButton>
       </div>
     </div>

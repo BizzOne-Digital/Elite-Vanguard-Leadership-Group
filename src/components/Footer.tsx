@@ -3,6 +3,7 @@ import { PageId } from '../types';
 import { COMPANY_INFO, TARGET_INDUSTRIES } from '../data/content';
 import { CTAButton } from './CTAButton';
 import { Phone, Mail, ArrowUpRight } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface FooterProps {
   onNavigate: (page: PageId) => void;
@@ -10,6 +11,7 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) => {
+  const { t } = useLanguage();
   const handleNav = (page: PageId) => {
     onNavigate(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -27,13 +29,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
             <div className="lg:col-span-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 border border-[#222222] rounded text-[11px] font-semibold uppercase tracking-[0.2em] text-[#C5A059] bg-[#141414]">
                 <span className="w-1.5 h-1.5 bg-[#C5A059] rounded-full inline-block"></span>
-                Executive Engagement
+                {t('Executive Engagement')}
               </div>
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white tracking-tight">
-                Bridge the Critical Gap Between Strategy and Frontline Execution
+                {t('Bridge the Critical Gap Between Strategy and Frontline Execution')}
               </h3>
               <p className="mt-3 text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
-                Equip your organization with the discipline, accountability, and operational precision needed to navigate complex, high-consequence environments.
+                {t('Equip your organization with the discipline, accountability, and operational precision needed to navigate complex, high-consequence environments.')}
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
@@ -44,11 +46,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
                 size="md"
                 className="w-full sm:w-auto text-center"
               >
-                Book a Consultation
+                {t('Book a Consultation')}
               </CTAButton>
               <div className="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-widest text-slate-500 py-2">
                 <Phone className="w-3.5 h-3.5" />
-                <span>Direct: [Phone Number - TBD]</span>
+                <span>{t('Direct: [Phone Number - TBD]')}</span>
               </div>
             </div>
           </div>
@@ -73,22 +75,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
             </div>
 
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-sans pr-4">
-              A veteran-led management consulting and leadership development firm translating time-tested military principles into high-performance commercial and operational excellence.
+              {t('A veteran-led management consulting and leadership development firm translating time-tested military principles into high-performance commercial and operational excellence.')}
             </p>
 
             {/* Mission Statement Excerpt */}
             <div className="p-4 border-l-2 border-[#C5A059] bg-[#141414] rounded-r-lg border-y border-r border-[#222222] text-xs text-slate-300 italic leading-relaxed">
               <span className="block font-sans not-italic font-bold text-[10px] tracking-widest uppercase text-[#C5A059] mb-1">
-                Our Mission
+                {t('Our Mission')}
               </span>
-              &ldquo;{COMPANY_INFO.mission}&rdquo;
+              &ldquo;{t(COMPANY_INFO.mission)}&rdquo;
             </div>
           </div>
 
           {/* Col 2: Navigation */}
           <div className="lg:col-span-2 space-y-4">
             <h4 className="font-serif text-sm font-bold tracking-widest uppercase text-[#C5A059] border-b border-[#222222] pb-2">
-              Navigation
+              {t('Navigation')}
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               {[
@@ -105,7 +107,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
                     onClick={() => handleNav(item.id as PageId)}
                     className="text-slate-400 hover:text-[#C5A059] hover:translate-x-1 transition-all inline-flex items-center gap-1 cursor-pointer"
                   >
-                    <span>{item.label}</span>
+                    <span>{t(item.label)}</span>
                   </button>
                 </li>
               ))}
@@ -115,7 +117,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
           {/* Col 3: Target Sectors */}
           <div className="lg:col-span-2 space-y-4">
             <h4 className="font-serif text-sm font-bold tracking-widest uppercase text-[#C5A059] border-b border-[#222222] pb-2">
-              Target Sectors
+              {t('Target Sectors')}
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               {TARGET_INDUSTRIES.map((industry) => (
@@ -124,7 +126,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
                     onClick={() => handleNav('services')}
                     className="hover:text-white transition-colors text-left"
                   >
-                    {industry.shortLabel}
+                    {t(industry.shortLabel)}
                   </button>
                 </li>
               ))}
@@ -134,7 +136,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
           {/* Col 4: Contact & Direct Inquiries */}
           <div className="lg:col-span-3 space-y-4">
             <h4 className="font-serif text-sm font-bold tracking-widest uppercase text-[#C5A059] border-b border-[#222222] pb-2">
-              Direct Contact
+              {t('Direct Contact')}
             </h4>
 
             <div className="space-y-3 text-xs sm:text-sm text-slate-300">
@@ -144,7 +146,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
               </div> */}
 
               <div>
-                <span className="block text-[10px] uppercase tracking-wider text-slate-500">Direct Telephone</span>
+                <span className="block text-[10px] uppercase tracking-wider text-slate-500">{t('Direct Telephone')}</span>
                 <div className="inline-flex items-center gap-2 text-slate-400 mt-0.5">
                   <Phone className="w-3.5 h-3.5 text-slate-500" />
                   <span>[Phone Number - TBD]</span>
@@ -152,7 +154,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
               </div>
 
               <div>
-                <span className="block text-[10px] uppercase tracking-wider text-slate-500">Confidential Inquiries</span>
+                <span className="block text-[10px] uppercase tracking-wider text-slate-500">{t('Confidential Inquiries')}</span>
                 <div className="inline-flex items-center gap-2 text-slate-400 mt-0.5 break-all">
                   <Mail className="w-3.5 h-3.5 text-slate-500 shrink-0" />
                   <span>[Email Address - TBD]</span>
@@ -165,7 +167,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
                 onClick={() => handleNav('booking')}
                 className="w-full text-center py-2.5 px-4 text-xs font-semibold uppercase tracking-widest rounded-lg border border-[#222222] bg-[#141414] text-[#C5A059] hover:bg-[#C5A059] hover:text-[#0A0A0A] hover:border-[#C5A059] transition-all flex items-center justify-center gap-2"
               >
-                <span>Request Consultation</span>
+                <span>{t('Request Consultation')}</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </button>
             </div>
@@ -176,7 +178,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
         <div className="mt-14 pt-8 border-t border-[#222222] flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <div className="flex flex-wrap items-center gap-3">
             <p>
-              &copy; {new Date().getFullYear()} {COMPANY_INFO.legalName}. All rights reserved.
+              &copy; {new Date().getFullYear()} {COMPANY_INFO.legalName}. {t('All rights reserved.')}
             </p>
             {onReplaySplash && (
               <>
@@ -184,20 +186,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
                 <button
                   onClick={onReplaySplash}
                   className="text-slate-500 hover:text-[#C5A059] transition-colors cursor-pointer text-[11px] font-mono uppercase tracking-wider"
-                  title="Replay Brand Intro Sequence"
+                  title={t('Replay Brand Intro Sequence')}
                 >
-                  Replay Intro
+                  {t('Replay Intro')}
                 </button>
               </>
             )}
           </div>
           <div className="flex items-center gap-4 sm:gap-6 text-slate-400 text-[11px]">
             <span className="text-[#C5A059]">•</span>
-            <span>Executive Consulting</span>
+            <span>{t('Executive Consulting')}</span>
             <span className="text-[#C5A059]">•</span>
-            <span>Operational Rigor</span>
+            <span>{t('Operational Rigor')}</span>
             <span className="text-[#C5A059]">•</span>
-            <span>Frontline Execution</span>
+            <span>{t('Frontline Execution')}</span>
           </div>
         </div>
       </div>

@@ -12,6 +12,7 @@ import { BookingPage } from './pages/BookingPage';
 import { ContactPage } from './pages/ContactPage';
 import { Phone, Calendar, Sparkles } from 'lucide-react';
 import { COMPANY_INFO } from './data/content';
+import { useLanguage } from './i18n/LanguageContext';
 
 const VALID_PAGES: PageId[] = ['home', 'about', 'services', 'team', 'booking', 'contact'];
 
@@ -21,6 +22,7 @@ const getPageFromPath = (): PageId => {
 };
 
 export default function App() {
+  const { t } = useLanguage();
   const [currentPage, setCurrentPage] = useState<PageId>(getPageFromPath);
   const [showSplash, setShowSplash] = useState<boolean>(() => {
     // Check if splash has already run in this session
@@ -112,9 +114,9 @@ export default function App() {
         <div className="fixed bottom-5 right-5 z-40 flex items-center gap-2">
           <a
             href={COMPANY_INFO.phoneLink}
-            title="Call Walter directly"
+            title={t('Call Walter directly')}
             className="w-11 h-11 rounded-full bg-[#141414] border border-[#222222] text-[#C5A059] hover:text-[#0A0A0A] hover:bg-[#C5A059] hover:border-[#C5A059] shadow-xl flex items-center justify-center transition-all duration-300 active:scale-95"
-            aria-label="Direct Phone Contact"
+            aria-label={t('Direct Phone Contact')}
           >
             <Phone className="w-5 h-5" />
           </a>
@@ -124,7 +126,7 @@ export default function App() {
             className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#C5A059] text-[#0A0A0A] text-xs uppercase tracking-widest font-bold shadow-2xl hover:bg-[#D4AF37] transition-all duration-300 cursor-pointer border border-[#C5A059] active:scale-95"
           >
             <Calendar className="w-4 h-4" />
-            <span>Consultation</span>
+            <span>{t('Consultation')}</span>
           </button>
         </div>
       )}

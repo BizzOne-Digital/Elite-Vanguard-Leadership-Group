@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PageId } from '../types';
 import { CheckCircle2, ArrowRight, RotateCcw, AlertTriangle, Sparkles, TrendingUp } from 'lucide-react';
 import { CTAButton } from './CTAButton';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface DiagnosticQuestion {
   id: string;
@@ -110,6 +111,7 @@ interface OperationalReadinessDiagnosticProps {
 }
 
 export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagnosticProps> = ({ onNavigate }) => {
+  const { t } = useLanguage();
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, number>>({
     translation: 18,
     accountability: 10,
@@ -169,13 +171,13 @@ export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagno
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-2 border border-[#222222] rounded text-[10px] font-mono uppercase tracking-[0.25em] text-[#C5A059] bg-[#111111]">
             <Sparkles className="w-3 h-3" />
-            Interactive Assessment Tool
+            {t('Interactive Assessment Tool')}
           </div>
           <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
-            Operational Readiness & Execution Diagnostic
+            {t('Operational Readiness & Execution Diagnostic')}
           </h3>
           <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl font-light">
-            Evaluate your organization's frontline command alignment across 4 high-consequence pillars to calculate your Execution Index.
+            {t("Evaluate your organization's frontline command alignment across 4 high-consequence pillars to calculate your Execution Index.")}
           </p>
         </div>
 
@@ -184,7 +186,7 @@ export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagno
           className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-slate-400 hover:text-white transition-colors cursor-pointer self-start md:self-auto py-1 px-2.5 rounded border border-[#222222] bg-[#111111]"
         >
           <RotateCcw className="w-3.5 h-3.5" />
-          <span>Reset Diagnostic</span>
+          <span>{t('Reset Diagnostic')}</span>
         </button>
       </div>
 
@@ -196,15 +198,15 @@ export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagno
             <div key={q.id} className="p-4 sm:p-5 rounded-xl border border-[#222222] bg-[#111111] space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[#C5A059]">
-                  Pillar 0{qIndex + 1}: {q.pillar}
+                  {t('Pillar')} 0{qIndex + 1}: {t(q.pillar)}
                 </span>
                 <span className="text-xs font-mono text-slate-400">
-                  Selected: {selectedAnswers[q.id]}/25 pts
+                  {t('Selected:')} {selectedAnswers[q.id]}/25 {t('pts')}
                 </span>
               </div>
 
               <p className="text-sm font-serif font-semibold text-white">
-                {q.question}
+                {t(q.question)}
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
@@ -223,14 +225,14 @@ export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagno
                       <div>
                         <div className="flex items-center justify-between mb-1">
                           <span className={`text-xs font-bold ${isSelected ? 'text-[#C5A059]' : 'text-slate-300'}`}>
-                            {opt.label}
+                            {t(opt.label)}
                           </span>
                           <span className={`text-[10px] font-mono ${isSelected ? 'text-[#C5A059]' : 'text-slate-600'}`}>
-                            {opt.points} pts
+                            {opt.points} {t('pts')}
                           </span>
                         </div>
                         <p className="text-[11px] leading-relaxed text-slate-400">
-                          {opt.description}
+                          {t(opt.description)}
                         </p>
                       </div>
                     </button>
@@ -245,7 +247,7 @@ export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagno
         <div className="lg:col-span-5 border border-[#222222] bg-[#111111] rounded-xl p-6 sm:p-8 space-y-6 lg:sticky lg:top-24">
           <div className="text-center space-y-3 pb-6 border-b border-[#222222]">
             <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#C5A059] block">
-              Frontline Execution Index
+              {t('Frontline Execution Index')}
             </span>
 
             {/* Visual Gauge Display */}
@@ -255,7 +257,7 @@ export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagno
                   {totalScore}
                 </span>
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[#C5A059]">
-                  / 100 Total
+                  {t('/ 100 Total')}
                 </span>
               </div>
             </div>
@@ -263,7 +265,7 @@ export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagno
             {/* Score Tier Badge */}
             <div>
               <span className={`inline-block px-3 py-1 rounded text-xs font-mono uppercase tracking-wider border ${currentTier.badgeColor}`}>
-                {currentTier.tier}
+                {t(currentTier.tier)}
               </span>
             </div>
           </div>
@@ -272,20 +274,20 @@ export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagno
           <div className="space-y-4 text-xs leading-relaxed">
             <div>
               <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 block mb-1">
-                Executive Diagnostic Findings:
+                {t('Executive Diagnostic Findings:')}
               </span>
               <p className="text-slate-300 font-light">
-                {currentTier.summary}
+                {t(currentTier.summary)}
               </p>
             </div>
 
             <div className="p-3.5 rounded-lg border border-[#222222] bg-[#141414] space-y-1.5">
               <span className="font-mono text-[10px] uppercase tracking-wider text-[#C5A059] flex items-center gap-1.5">
                 <TrendingUp className="w-3.5 h-3.5 text-[#C5A059]" />
-                Recommended Strategic Action
+                {t('Recommended Strategic Action')}
               </span>
               <p className="text-white font-serif font-medium text-xs">
-                {currentTier.recommendation}
+                {t(currentTier.recommendation)}
               </p>
             </div>
           </div>
@@ -299,10 +301,10 @@ export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagno
               icon="arrow"
               className="w-full justify-center shadow-xl"
             >
-              Discuss Findings With Walter
+              {t('Discuss Findings With Walter')}
             </CTAButton>
             <p className="text-[11px] text-slate-400 text-center mt-2 font-mono">
-              Confidential executive review with lead consultant.
+              {t('Confidential executive review with lead consultant.')}
             </p>
           </div>
         </div>

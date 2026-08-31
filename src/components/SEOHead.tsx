@@ -1,29 +1,32 @@
 import React, { useEffect } from 'react';
 import { PageId } from '../types';
 import { COMPANY_INFO, FOUNDER_PROFILES } from '../data/content';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface SEOHeadProps {
   page: PageId;
 }
 
 export const SEOHead: React.FC<SEOHeadProps> = ({ page }) => {
+  const { language, t } = useLanguage();
+
   useEffect(() => {
     const titles: Record<PageId, string> = {
-      home: `${COMPANY_INFO.name} | Executive Consulting & Operational Excellence`,
-      about: `About Us | ${COMPANY_INFO.name} | Veteran-Led Leadership Development`,
-      services: `Services & Practice Areas | ${COMPANY_INFO.name}`,
-      team: `Executive Leadership Team | ${COMPANY_INFO.name}`,
-      booking: `Book a Consultation | ${COMPANY_INFO.name}`,
-      contact: `Contact Us | ${COMPANY_INFO.name}`,
+      home: `${COMPANY_INFO.name} | ${t('Executive Consulting & Operational Excellence')}`,
+      about: `${t('About Us')} | ${COMPANY_INFO.name} | ${t('Veteran-Led Leadership Development')}`,
+      services: `${t('Services & Practice Areas')} | ${COMPANY_INFO.name}`,
+      team: `${t('Executive Leadership Team')} | ${COMPANY_INFO.name}`,
+      booking: `${t('Book a Consultation')} | ${COMPANY_INFO.name}`,
+      contact: `${t('Contact Us')} | ${COMPANY_INFO.name}`,
     };
 
     const descriptions: Record<PageId, string> = {
-      home: COMPANY_INFO.description,
-      about: `Learn about ${COMPANY_INFO.legalName} — a veteran-led management consulting and leadership development firm dedicated to translating time-tested military principles into high-performance operational excellence.`,
-      services: `Explore practice areas: Leadership Development, Management Consulting, Operational Excellence, Frontline Leadership, Corporate Leadership Academies, and Strategic Execution.`,
-      team: `Meet the leadership of ${COMPANY_INFO.name}, including Walter Horton (3rd U.S. Infantry Regiment / The Old Guard veteran) and Trevor McLeod (U.S. Army veteran & IBEW Local #3 Journeyperson).`,
-      booking: `Schedule a confidential executive consultation with ${COMPANY_INFO.name} to diagnose operational bottlenecks and bridge the strategy-to-execution gap.`,
-      contact: `Direct executive contact coordinates for ${COMPANY_INFO.name}. Connect with Walter via phone or email.`,
+      home: t(COMPANY_INFO.description),
+      about: `${t('Learn about')} ${COMPANY_INFO.legalName} ${t('— a veteran-led management consulting and leadership development firm dedicated to translating time-tested military principles into high-performance operational excellence.')}`,
+      services: t('Explore practice areas: Leadership Development, Management Consulting, Operational Excellence, Frontline Leadership, Corporate Leadership Academies, and Strategic Execution.'),
+      team: `${t('Meet the leadership of')} ${COMPANY_INFO.name}${t(', including Walter Horton (3rd U.S. Infantry Regiment / The Old Guard veteran) and Trevor McLeod (U.S. Army veteran & IBEW Local #3 Journeyperson).')}`,
+      booking: `${t('Schedule a confidential executive consultation with')} ${COMPANY_INFO.name} ${t('to diagnose operational bottlenecks and bridge the strategy-to-execution gap.')}`,
+      contact: `${t('Direct executive contact coordinates for')} ${COMPANY_INFO.name}. ${t('Connect with Walter via phone or email.')}`,
     };
 
     document.title = titles[page] || titles.home;
@@ -60,7 +63,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ page }) => {
           "@id": "https://elitevanguard.com/#organization",
           "name": COMPANY_INFO.legalName,
           "alternateName": COMPANY_INFO.name,
-          "description": COMPANY_INFO.description,
+          "description": t(COMPANY_INFO.description),
           "email": "[Email - TBD]",
           "telephone": "[Phone - TBD]",
           "contactPoint": [
@@ -69,7 +72,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ page }) => {
               "telephone": "[Phone - TBD]",
               "contactType": "Executive Consultation",
               "name": COMPANY_INFO.contactPerson,
-              "availableLanguage": ["English"]
+              "availableLanguage": ["English", "Spanish"]
             }
           ]
         },
@@ -79,7 +82,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ page }) => {
           "name": "Walter Horton",
           "jobTitle": "Co-Founder & Executive Consultant",
           "worksFor": { "@id": "https://elitevanguard.com/#organization" },
-          "description": FOUNDER_PROFILES[0].bio
+          "description": t(FOUNDER_PROFILES[0].bio)
         },
         {
           "@type": "Person",
@@ -87,7 +90,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ page }) => {
           "name": "Trevor McLeod",
           "jobTitle": "Co-Founder & Operational Consultant",
           "worksFor": { "@id": "https://elitevanguard.com/#organization" },
-          "description": FOUNDER_PROFILES[1].bio
+          "description": t(FOUNDER_PROFILES[1].bio)
         },
         {
           "@type": "WebPage",
@@ -100,7 +103,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ page }) => {
     };
 
     structuredDataScript.textContent = JSON.stringify(schema);
-  }, [page]);
+  }, [page, language, t]);
 
   return null;
 };

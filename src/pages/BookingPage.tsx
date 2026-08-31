@@ -16,12 +16,14 @@ import {
   Lock,
   ArrowRight
 } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface BookingPageProps {
   onNavigate: (page: PageId) => void;
 }
 
 export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState<ConsultationRequest>({
     fullName: '',
     organization: '',
@@ -70,14 +72,14 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 border border-[#222222] rounded text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-[#C5A059] bg-[#141414]">
             <Calendar className="w-3.5 h-3.5" />
-            Executive Engagement
+            {t('Executive Engagement')}
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white tracking-tight leading-tight">
-            Book a Consultation
+            {t('Book a Consultation')}
           </h1>
           <div className="h-[1px] w-24 mx-auto my-6 bg-gradient-to-r from-transparent via-[#C5A059] to-transparent" />
           <p className="text-base sm:text-xl text-slate-300 font-light leading-relaxed">
-            Schedule a confidential consultation with Walter Horton and our leadership team to evaluate your organization's operational challenges, supervisory capabilities, and high-consequence performance goals.
+            {t("Schedule a confidential consultation with Walter Horton and our leadership team to evaluate your organization's operational challenges, supervisory capabilities, and high-consequence performance goals.")}
           </p>
         </div>
       </section>
@@ -89,7 +91,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
             <div className="border border-[#222222] bg-[#141414] rounded-xl p-6 sm:p-8 shadow-xl space-y-6">
               <div>
                 <span className="text-xs font-mono uppercase tracking-widest text-[#C5A059] block mb-1">
-                  Direct Coordination
+                  {t('Direct Coordination')}
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white">
                   Elite Vanguard Leadership Group
@@ -98,12 +100,12 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
 
               <div className="space-y-4 text-xs sm:text-sm text-slate-300 pt-4 border-t border-[#222222]">
                 <div>
-                  <span className="block text-[10px] uppercase tracking-wider text-[#C5A059]">Lead Executive</span>
+                  <span className="block text-[10px] uppercase tracking-wider text-[#C5A059]">{t('Lead Executive')}</span>
                   <span className="font-semibold text-white text-base">{COMPANY_INFO.contactPerson}</span>
                 </div>
 
                 <div>
-                  <span className="block text-[10px] uppercase tracking-wider text-[#C5A059]">Direct Phone</span>
+                  <span className="block text-[10px] uppercase tracking-wider text-[#C5A059]">{t('Direct Phone')}</span>
                   <div
                     id="booking-sidebar-phone"
                     className="inline-flex items-center gap-2 text-sm font-mono text-slate-400 mt-0.5"
@@ -114,7 +116,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                 </div>
 
                 <div>
-                  <span className="block text-[10px] uppercase tracking-wider text-[#C5A059]">Confidential Email</span>
+                  <span className="block text-[10px] uppercase tracking-wider text-[#C5A059]">{t('Confidential Email')}</span>
                   <div
                     id="booking-sidebar-email"
                     className="inline-flex items-center gap-2 text-sm text-slate-400 mt-0.5 break-all"
@@ -128,11 +130,11 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
               <div className="pt-4 border-t border-[#222222] space-y-3">
                 <div className="flex items-start gap-2 text-xs text-slate-400">
                   <Lock className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
-                  <span>All consultations and organizational inquiries are handled with strict executive confidentiality.</span>
+                  <span>{t('All consultations and organizational inquiries are handled with strict executive confidentiality.')}</span>
                 </div>
                 <div className="flex items-start gap-2 text-xs text-slate-400">
                   <CheckCircle2 className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
-                  <span>Initial assessment reviews strategy-to-execution gaps and potential cohort academy scopes.</span>
+                  <span>{t('Initial assessment reviews strategy-to-execution gaps and potential cohort academy scopes.')}</span>
                 </div>
               </div>
             </div>
@@ -140,13 +142,13 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
             {/* Target Domains Quick Ref */}
             <div className="border border-[#222222] bg-[#141414] rounded-xl p-6 space-y-3">
               <span className="text-xs font-mono uppercase tracking-widest text-[#C5A059] block">
-                Primary Consulting Audiences
+                {t('Primary Consulting Audiences')}
               </span>
               <ul className="space-y-1.5 text-xs text-slate-400">
                 {TARGET_INDUSTRIES.map((ind) => (
                   <li key={ind.id} className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-[#C5A059] rounded-full shrink-0" />
-                    <span>{ind.shortLabel}</span>
+                    <span>{t(ind.shortLabel)}</span>
                   </li>
                 ))}
               </ul>
@@ -165,28 +167,28 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
 
                   <div className="space-y-2">
                     <span className="text-xs font-mono uppercase tracking-widest text-[#C5A059]">
-                      Consultation Request Received
+                      {t('Consultation Request Received')}
                     </span>
                     <h2 className="text-3xl font-serif font-bold text-white">
-                      Thank You, {formData.fullName}
+                      {t('Thank You')}, {formData.fullName}
                     </h2>
                     <p className="text-sm sm:text-base text-slate-300 max-w-lg mx-auto font-light leading-relaxed">
-                      Your consultation request for <strong>{formData.organization || 'your organization'}</strong> has been routed directly to Walter Horton. We will review your operational requirements and contact you at <strong>{formData.email}</strong> or <strong>{formData.phone}</strong> promptly.
+                      {t('Your consultation request for')} <strong>{formData.organization || t('your organization')}</strong> {t('has been routed directly to Walter Horton. We will review your operational requirements and contact you at')} <strong>{formData.email}</strong> {t('or')} <strong>{formData.phone}</strong> {t('promptly.')}
                     </p>
                   </div>
 
                   <div className="p-6 border border-[#222222] bg-[#111111] rounded-xl text-left max-w-md mx-auto text-xs space-y-2 text-slate-300">
                     <div className="flex justify-between border-b border-[#222222] pb-1">
-                      <span className="text-[#C5A059]">Sector:</span>
-                      <span className="font-semibold text-right text-white">{formData.industry}</span>
+                      <span className="text-[#C5A059]">{t('Sector:')}</span>
+                      <span className="font-semibold text-right text-white">{t(formData.industry)}</span>
                     </div>
                     <div className="flex justify-between border-b border-[#222222] pb-1">
-                      <span className="text-[#C5A059]">Preferred Window:</span>
-                      <span className="text-white">{formData.preferredTime}</span>
+                      <span className="text-[#C5A059]">{t('Preferred Window:')}</span>
+                      <span className="text-white">{t(formData.preferredTime)}</span>
                     </div>
                     {formData.preferredDate && (
                       <div className="flex justify-between border-b border-[#222222] pb-1">
-                        <span className="text-[#C5A059]">Requested Date:</span>
+                        <span className="text-[#C5A059]">{t('Requested Date:')}</span>
                         <span className="text-white">{formData.preferredDate}</span>
                       </div>
                     )}
@@ -211,7 +213,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                       }}
                       className="text-xs uppercase tracking-widest font-mono text-[#C5A059] hover:text-white underline underline-offset-4 cursor-pointer"
                     >
-                      Submit Another Request
+                      {t('Submit Another Request')}
                     </button>
                     <CTAButton
                       onClick={() => onNavigate('home')}
@@ -219,7 +221,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                       size="sm"
                       icon="arrow"
                     >
-                      Return to Home
+                      {t('Return to Home')}
                     </CTAButton>
                   </div>
                 </div>
@@ -228,16 +230,16 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                 <form id="consultation-booking-form" onSubmit={handleSubmit} className="space-y-6">
                   <div className="border-b border-[#222222] pb-4 mb-6">
                     <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white">
-                      Executive Consultation Request
+                      {t('Executive Consultation Request')}
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-400 mt-1">
-                      Please provide details regarding your organization, sector, and core operational focus.
+                      {t('Please provide details regarding your organization, sector, and core operational focus.')}
                     </p>
                   </div>
 
                   {errorMsg && (
                     <div className="p-3 border border-red-500/50 bg-red-950/40 text-red-300 rounded-lg text-xs">
-                      {errorMsg}
+                      {t(errorMsg)}
                     </div>
                   )}
 
@@ -248,7 +250,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         htmlFor="fullName"
                         className="block text-xs font-mono uppercase tracking-wider text-[#C5A059] mb-1.5"
                       >
-                        Full Name *
+                        {t('Full Name *')}
                       </label>
                       <div className="relative">
                         <input
@@ -258,7 +260,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                           required
                           value={formData.fullName}
                           onChange={handleChange}
-                          placeholder="e.g. Marcus Vance"
+                          placeholder={t('e.g. Marcus Vance')}
                           className="w-full bg-[#111111] border border-[#222222] focus:border-[#C5A059] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none transition-colors"
                         />
                       </div>
@@ -269,7 +271,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         htmlFor="title"
                         className="block text-xs font-mono uppercase tracking-wider text-[#C5A059] mb-1.5"
                       >
-                        Title / Role
+                        {t('Title / Role')}
                       </label>
                       <input
                         id="title"
@@ -277,7 +279,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         type="text"
                         value={formData.title}
                         onChange={handleChange}
-                        placeholder="e.g. VP of Operations / Plant Manager"
+                        placeholder={t('e.g. VP of Operations / Plant Manager')}
                         className="w-full bg-[#111111] border border-[#222222] focus:border-[#C5A059] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none transition-colors"
                       />
                     </div>
@@ -287,7 +289,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         htmlFor="organization"
                         className="block text-xs font-mono uppercase tracking-wider text-[#C5A059] mb-1.5"
                       >
-                        Organization / Agency *
+                        {t('Organization / Agency *')}
                       </label>
                       <input
                         id="organization"
@@ -296,7 +298,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         required
                         value={formData.organization}
                         onChange={handleChange}
-                        placeholder="e.g. Apex Logistics Corp / City Water Dept"
+                        placeholder={t('e.g. Apex Logistics Corp / City Water Dept')}
                         className="w-full bg-[#111111] border border-[#222222] focus:border-[#C5A059] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none transition-colors"
                       />
                     </div>
@@ -306,7 +308,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         htmlFor="industry"
                         className="block text-xs font-mono uppercase tracking-wider text-[#C5A059] mb-1.5"
                       >
-                        Target Sector *
+                        {t('Target Sector *')}
                       </label>
                       <select
                         id="industry"
@@ -317,11 +319,11 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                       >
                         {TARGET_INDUSTRIES.map((ind) => (
                           <option key={ind.id} value={ind.title} className="bg-[#141414] text-white">
-                            {ind.title}
+                            {t(ind.title)}
                           </option>
                         ))}
                         <option value="Other High-Consequence Commercial Enterprise" className="bg-[#141414] text-white">
-                          Other Commercial / Industrial Enterprise
+                          {t('Other Commercial / Industrial Enterprise')}
                         </option>
                       </select>
                     </div>
@@ -331,7 +333,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         htmlFor="email"
                         className="block text-xs font-mono uppercase tracking-wider text-[#C5A059] mb-1.5"
                       >
-                        Work Email *
+                        {t('Work Email *')}
                       </label>
                       <input
                         id="email"
@@ -350,7 +352,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         htmlFor="phone"
                         className="block text-xs font-mono uppercase tracking-wider text-[#C5A059] mb-1.5"
                       >
-                        Direct Telephone *
+                        {t('Direct Telephone *')}
                       </label>
                       <input
                         id="phone"
@@ -372,7 +374,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         htmlFor="operationalChallenge"
                         className="block text-xs font-mono uppercase tracking-wider text-[#C5A059] mb-1.5"
                       >
-                        Core Leadership or Operational Challenge
+                        {t('Core Leadership or Operational Challenge')}
                       </label>
                       <textarea
                         id="operationalChallenge"
@@ -380,7 +382,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         rows={3}
                         value={formData.operationalChallenge}
                         onChange={handleChange}
-                        placeholder="Describe the primary friction points between executive strategy and field performance, supervisory cohort needs, or operational rigor objectives..."
+                        placeholder={t('Describe the primary friction points between executive strategy and field performance, supervisory cohort needs, or operational rigor objectives...')}
                         className="w-full bg-[#111111] border border-[#222222] focus:border-[#C5A059] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none transition-colors"
                       />
                     </div>
@@ -391,7 +393,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                           htmlFor="preferredDate"
                           className="block text-xs font-mono uppercase tracking-wider text-[#C5A059] mb-1.5"
                         >
-                          Preferred Date Window
+                          {t('Preferred Date Window')}
                         </label>
                         <input
                           id="preferredDate"
@@ -408,7 +410,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                           htmlFor="preferredTime"
                           className="block text-xs font-mono uppercase tracking-wider text-[#C5A059] mb-1.5"
                         >
-                          Preferred Time Window
+                          {t('Preferred Time Window')}
                         </label>
                         <select
                           id="preferredTime"
@@ -417,9 +419,9 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                           onChange={handleChange}
                           className="w-full bg-[#111111] border border-[#222222] focus:border-[#C5A059] rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none transition-colors"
                         >
-                          <option value="Morning (08:00 - 12:00 EST)" className="bg-[#141414]">Morning (08:00 - 12:00 EST)</option>
-                          <option value="Afternoon (12:00 - 17:00 EST)" className="bg-[#141414]">Afternoon (12:00 - 17:00 EST)</option>
-                          <option value="Late Afternoon (17:00 - 19:00 EST)" className="bg-[#141414]">Late Afternoon (17:00 - 19:00 EST)</option>
+                          <option value="Morning (08:00 - 12:00 EST)" className="bg-[#141414]">{t('Morning (08:00 - 12:00 EST)')}</option>
+                          <option value="Afternoon (12:00 - 17:00 EST)" className="bg-[#141414]">{t('Afternoon (12:00 - 17:00 EST)')}</option>
+                          <option value="Late Afternoon (17:00 - 19:00 EST)" className="bg-[#141414]">{t('Late Afternoon (17:00 - 19:00 EST)')}</option>
                         </select>
                       </div>
                     </div>
@@ -429,7 +431,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         htmlFor="message"
                         className="block text-xs font-mono uppercase tracking-wider text-[#C5A059] mb-1.5"
                       >
-                        Additional Context / Notes
+                        {t('Additional Context / Notes')}
                       </label>
                       <textarea
                         id="message"
@@ -437,7 +439,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                         rows={2}
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Any additional background, cohort size, or specific timeline constraints..."
+                        placeholder={t('Any additional background, cohort size, or specific timeline constraints...')}
                         className="w-full bg-[#111111] border border-[#222222] focus:border-[#C5A059] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none transition-colors"
                       />
                     </div>
@@ -446,7 +448,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                   <div className="pt-4 border-t border-[#222222] flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="text-xs text-slate-400 flex items-center gap-1.5">
                       <img src="/image/logo.png" alt="Elite Vanguard" className="w-4 h-4 rounded" />
-                      <span>Confidentiality & Executive Discretion Guaranteed</span>
+                      <span>{t('Confidentiality & Executive Discretion Guaranteed')}</span>
                     </div>
 
                     <CTAButton
@@ -458,7 +460,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                       icon="arrow"
                       className="w-full sm:w-auto"
                     >
-                      {isSubmitting ? 'Transmitting Request...' : 'Submit Consultation Request'}
+                      {isSubmitting ? t('Transmitting Request...') : t('Submit Consultation Request')}
                     </CTAButton>
                   </div>
                 </form>

@@ -23,12 +23,14 @@ import {
   TrendingUp,
   Briefcase
 } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface HomePageProps {
   onNavigate: (page: PageId) => void;
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
+  const { t } = useLanguage();
   return (
     <div id="home-page" className="w-full bg-[#0A0A0A] text-slate-300">
       {/* 1. CINEMATIC HERO SECTION */}
@@ -57,14 +59,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
                 <img src="/image/logo.png" alt="Elite Vanguard" className="w-3.5 h-3.5 rounded" />
             <span className="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-[#C5A059]">
-              Veteran-Led Executive & Operational Consulting
+              {t('Veteran-Led Executive & Operational Consulting')}
             </span>
           </div>
 
           {/* Approved Homepage Headline Area */}
           <div className="mb-6">
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white tracking-tight leading-[1.1] max-w-5xl mx-auto">
-              Translating Military Discipline Into Frontline Operational Excellence
+              {t('Translating Military Discipline Into Frontline Operational Excellence')}
             </h1>
             {/* Visual Headline Approval Reservation Notice */}
             <div className="mt-3 inline-block">
@@ -76,7 +78,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
           {/* Subtitle with High-Stakes Focus */}
           <p className="mt-4 text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-sans font-light leading-relaxed">
-            Bridging the critical divide between executive strategy and field execution for enterprise operations, public sector agencies, defense contractors, and high-consequence industries.
+            {t('Bridging the critical divide between executive strategy and field execution for enterprise operations, public sector agencies, defense contractors, and high-consequence industries.')}
           </p>
 
           {/* Dual CTAs */}
@@ -89,7 +91,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               icon="arrow"
               className="w-full sm:w-auto shadow-2xl"
             >
-              Book a Consultation
+              {t('Book a Consultation')}
             </CTAButton>
 
             <CTAButton
@@ -100,7 +102,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               icon="chevron"
               className="w-full sm:w-auto"
             >
-              Explore Practice Areas
+              {t('Explore Practice Areas')}
             </CTAButton>
           </div>
 
@@ -108,7 +110,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="mt-8 pt-6 border-t border-[#222222] flex items-center justify-center gap-6 text-xs text-slate-400">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-              <span className="text-[#C5A059] font-medium tracking-wider">Direct Engagement:</span>
+              <span className="text-[#C5A059] font-medium tracking-wider">{t('Direct Engagement:')}</span>
               <span className="font-mono text-slate-400">
                 [Phone - TBD]
               </span>
@@ -122,20 +124,20 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           {/* Proven Executive Impact Stats Bar (Inspired by High-Performance Consulting Standards) */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-8 border-t border-[#222222]">
             <div className="p-4 rounded-xl border border-[#222222] bg-[#111111]/80 backdrop-blur-sm text-left">
-              <span className="text-2xl sm:text-3xl font-serif font-extrabold text-white block">38+ Team</span>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A059]">Supervisory Command Span</span>
+              <span className="text-2xl sm:text-3xl font-serif font-extrabold text-white block">{t('38+ Team')}</span>
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A059]">{t('Supervisory Command Span')}</span>
             </div>
             <div className="p-4 rounded-xl border border-[#222222] bg-[#111111]/80 backdrop-blur-sm text-left">
-              <span className="text-2xl sm:text-3xl font-serif font-extrabold text-white block">Zero-Defect</span>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A059]">Operational Standard</span>
+              <span className="text-2xl sm:text-3xl font-serif font-extrabold text-white block">{t('Zero-Defect')}</span>
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A059]">{t('Operational Standard')}</span>
             </div>
             <div className="p-4 rounded-xl border border-[#222222] bg-[#111111]/80 backdrop-blur-sm text-left">
               <span className="text-2xl sm:text-3xl font-serif font-extrabold text-white block">100%</span>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A059]">Outcome Ownership</span>
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A059]">{t('Outcome Ownership')}</span>
             </div>
             <div className="p-4 rounded-xl border border-[#222222] bg-[#111111]/80 backdrop-blur-sm text-left">
-              <span className="text-2xl sm:text-3xl font-serif font-extrabold text-white block">National</span>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A059]">Consulting Capability</span>
+              <span className="text-2xl sm:text-3xl font-serif font-extrabold text-white block">{t('National')}</span>
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#C5A059]">{t('Consulting Capability')}</span>
             </div>
           </div>
         </div>
@@ -149,7 +151,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-5">
             <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.3em] uppercase text-[#C5A059]">
-              Institutional Focus & Key Industry Domains
+              {t('Institutional Focus & Key Industry Domains')}
             </span>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 lg:gap-6 items-center">
@@ -163,7 +165,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   0{index + 1}
                 </div>
                 <div className="font-serif text-xs sm:text-sm font-semibold text-white group-hover:text-[#C5A059] transition-colors leading-snug line-clamp-2">
-                  {industry.shortLabel}
+                  {t(industry.shortLabel)}
                 </div>
               </button>
             ))}
@@ -188,10 +190,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 {/* Floating Prestige Callout */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 bg-[#141414]/95 border border-[#222222] rounded-lg backdrop-blur-md">
                   <span className="block text-[10px] font-mono tracking-widest uppercase text-[#C5A059] mb-1">
-                    Leadership Standard
+                    {t('Leadership Standard')}
                   </span>
                   <p className="text-xs sm:text-sm font-serif font-bold text-white leading-tight">
-                    &ldquo;Authentic authority is earned through presence, competence, and service.&rdquo;
+                    &ldquo;{t('Authentic authority is earned through presence, competence, and service.')}&rdquo;
                   </p>
                 </div>
               </div>
@@ -200,8 +202,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             {/* Right Col: Verbatim Company Description */}
             <div className="lg:col-span-7 space-y-6">
               <SectionHeader
-                badge="About Elite Vanguard"
-                title="Bridging the Critical Divide Between Strategy & Frontline Execution"
+                badge={t('About Elite Vanguard')}
+                title={t('Bridging the Critical Divide Between Strategy & Frontline Execution')}
                 align="left"
                 theme="dark"
               />
@@ -209,7 +211,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               {/* Verbatim Company Description Box */}
               <div className="p-6 sm:p-8 border-l-2 border-[#C5A059] bg-[#141414] rounded-r-xl border-y border-r border-[#222222] shadow-lg">
                 <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-sans font-light">
-                  {COMPANY_INFO.description}
+                  {t(COMPANY_INFO.description)}
                 </p>
               </div>
 
@@ -217,20 +219,20 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
                 <div className="p-4 rounded-xl border border-[#222222] bg-[#141414]">
                   <Layers className="w-5 h-5 text-[#C5A059] mb-2" />
-                  <h4 className="font-serif font-bold text-sm text-white">Military Rigor</h4>
-                  <p className="text-xs text-slate-400 mt-1">Time-tested command and squad-level accountability.</p>
+                  <h4 className="font-serif font-bold text-sm text-white">{t('Military Rigor')}</h4>
+                  <p className="text-xs text-slate-400 mt-1">{t('Time-tested command and squad-level accountability.')}</p>
                 </div>
 
                 <div className="p-4 rounded-xl border border-[#222222] bg-[#141414]">
                   <Target className="w-5 h-5 text-[#C5A059] mb-2" />
-                  <h4 className="font-serif font-bold text-sm text-white">Frontline Precision</h4>
-                  <p className="text-xs text-slate-400 mt-1">Direct transition of directives to supervisor-level execution.</p>
+                  <h4 className="font-serif font-bold text-sm text-white">{t('Frontline Precision')}</h4>
+                  <p className="text-xs text-slate-400 mt-1">{t('Direct transition of directives to supervisor-level execution.')}</p>
                 </div>
 
                 <div className="p-4 rounded-xl border border-[#222222] bg-[#141414]">
                   <Compass className="w-5 h-5 text-[#C5A059] mb-2" />
-                  <h4 className="font-serif font-bold text-sm text-white">Decisive Outcomes</h4>
-                  <p className="text-xs text-slate-400 mt-1">Uncompromising mission success in high-risk domains.</p>
+                  <h4 className="font-serif font-bold text-sm text-white">{t('Decisive Outcomes')}</h4>
+                  <p className="text-xs text-slate-400 mt-1">{t('Uncompromising mission success in high-risk domains.')}</p>
                 </div>
               </div>
 
@@ -241,7 +243,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   size="md"
                   icon="arrow"
                 >
-                  Meet Our Leadership
+                  {t('Meet Our Leadership')}
                 </CTAButton>
                 <CTAButton
                   onClick={() => onNavigate('about')}
@@ -249,7 +251,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   size="md"
                   icon="chevron"
                 >
-                  Learn About Our Approach
+                  {t('Learn About Our Approach')}
                 </CTAButton>
               </div>
             </div>
@@ -261,9 +263,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section id="readiness-diagnostic-section" className="py-20 sm:py-28 bg-[#111111] border-y border-[#222222]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Executive Self-Assessment"
-            title="Operational Readiness & Leadership Gap Diagnostic"
-            subtitle="Measure how effectively your C-suite directives are converted into frontline shift discipline and accountability."
+            badge={t('Executive Self-Assessment')}
+            title={t('Operational Readiness & Leadership Gap Diagnostic')}
+            subtitle={t('Measure how effectively your C-suite directives are converted into frontline shift discipline and accountability.')}
             align="center"
             theme="dark"
           />
@@ -278,9 +280,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section id="differentiation-section" className="py-20 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Strategic Architecture"
-            title="The Operational Bridge"
-            subtitle="Organizations rarely fail at formulating strategy. They fail at translating strategic intent into frontline daily execution."
+            badge={t('Strategic Architecture')}
+            title={t('The Operational Bridge')}
+            subtitle={t('Organizations rarely fail at formulating strategy. They fail at translating strategic intent into frontline daily execution.')}
             align="center"
             theme="dark"
           />
@@ -290,36 +292,36 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="p-8 rounded-xl border border-[#222222] bg-[#141414] relative flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-mono tracking-widest text-[#C5A059] uppercase">Phase 01</span>
+                  <span className="text-xs font-mono tracking-widest text-[#C5A059] uppercase">{t('Phase 01')}</span>
                   <Building2 className="w-5 h-5 text-[#C5A059]" />
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-white mb-3">Executive Strategy</h3>
+                <h3 className="font-serif text-2xl font-bold text-white mb-3">{t('Executive Strategy')}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">
-                  High-level directives, organizational objectives, enterprise governance, and capital allocation formulated in boardrooms and executive suites.
+                  {t('High-level directives, organizational objectives, enterprise governance, and capital allocation formulated in boardrooms and executive suites.')}
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-[#222222] text-xs font-mono text-[#C5A059]">
-                Strategic Intent Defined
+                {t('Strategic Intent Defined')}
               </div>
             </div>
 
             {/* Step 2: Frontline Execution */}
             <div className="p-8 rounded-xl border-2 border-[#C5A059] bg-[#1A1A1A] relative flex flex-col justify-between shadow-2xl shadow-black/80 transform md:-translate-y-2">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#C5A059] text-[#0A0A0A] text-[10px] font-bold uppercase tracking-widest px-3 py-0.5 rounded">
-                The Critical Bridge
+                {t('The Critical Bridge')}
               </div>
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-mono tracking-widest text-[#C5A059] uppercase">Phase 02</span>
+                  <span className="text-xs font-mono tracking-widest text-[#C5A059] uppercase">{t('Phase 02')}</span>
                   <Users className="w-5 h-5 text-[#C5A059]" />
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-white mb-3">Frontline Execution</h3>
+                <h3 className="font-serif text-2xl font-bold text-white mb-3">{t('Frontline Execution')}</h3>
                 <p className="text-sm text-slate-200 leading-relaxed">
-                  Where strategy meets reality: supervisors, foremen, crew leaders, and field teams operating with clear standards, total accountability, and decisive leadership.
+                  {t('Where strategy meets reality: supervisors, foremen, crew leaders, and field teams operating with clear standards, total accountability, and decisive leadership.')}
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-[#C5A059]/30 text-xs font-mono text-[#C5A059] font-bold">
-                Elite Vanguard Engagement Zone
+                {t('Elite Vanguard Engagement Zone')}
               </div>
             </div>
 
@@ -327,16 +329,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="p-8 rounded-xl border border-[#222222] bg-[#141414] relative flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-mono tracking-widest text-[#C5A059] uppercase">Phase 03</span>
+                  <span className="text-xs font-mono tracking-widest text-[#C5A059] uppercase">{t('Phase 03')}</span>
                   <Award className="w-5 h-5 text-[#C5A059]" />
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-white mb-3">Operational Excellence</h3>
+                <h3 className="font-serif text-2xl font-bold text-white mb-3">{t('Operational Excellence')}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">
-                  Repeatable high performance, zero-defect culture, reliable safety metrics, and consistent mission accomplishment across high-consequence environments.
+                  {t('Repeatable high performance, zero-defect culture, reliable safety metrics, and consistent mission accomplishment across high-consequence environments.')}
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-[#222222] text-xs font-mono text-[#C5A059]">
-                Uncompromising Mission Success
+                {t('Uncompromising Mission Success')}
               </div>
             </div>
           </div>
@@ -348,7 +350,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               size="md"
               icon="arrow"
             >
-              Request Operational Diagnostics
+              {t('Request Operational Diagnostics')}
             </CTAButton>
           </div>
         </div>
@@ -358,9 +360,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section id="deployment-blueprint-section" className="py-20 sm:py-28 bg-[#111111] border-y border-[#222222]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Execution Blueprint"
-            title="How We Engage & Transform Organizations"
-            subtitle="A structured, battle-tested consulting engagement framework engineered for high-consequence enterprise and municipal operations."
+            badge={t('Execution Blueprint')}
+            title={t('How We Engage & Transform Organizations')}
+            subtitle={t('A structured, battle-tested consulting engagement framework engineered for high-consequence enterprise and municipal operations.')}
             align="center"
             theme="dark"
           />
@@ -389,9 +391,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section id="industries-section" className="py-20 sm:py-28 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Target Sectors"
-            title="Institutional & Industry Focus"
-            subtitle="We tailor battle-tested leadership principles to the operational realities of high-consequence domains."
+            badge={t('Target Sectors')}
+            title={t('Institutional & Industry Focus')}
+            subtitle={t('We tailor battle-tested leadership principles to the operational realities of high-consequence domains.')}
             align="center"
             theme="dark"
           />
@@ -419,10 +421,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <h3 className="font-serif text-lg font-bold text-white group-hover:text-[#C5A059] transition-colors leading-snug mb-3">
-                      {industry.title}
+                      {t(industry.title)}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4">
-                      {industry.description}
+                      {t(industry.description)}
                     </p>
 
                     {/* Applications list */}
@@ -430,7 +432,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                       {industry.applications.slice(0, 3).map((app, appIdx) => (
                         <div key={appIdx} className="flex items-center gap-2 text-xs text-slate-300">
                           <CheckCircle2 className="w-3 h-3 text-[#C5A059] shrink-0" />
-                          <span>{app}</span>
+                          <span>{t(app)}</span>
                         </div>
                       ))}
                     </div>
@@ -441,7 +443,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                       onClick={() => onNavigate('booking')}
                       className="w-full flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-[#C5A059] hover:text-white transition-colors cursor-pointer"
                     >
-                      <span>Engage Consulting</span>
+                      <span>{t('Engage Consulting')}</span>
                       <ChevronRight className="w-4 h-4 text-[#C5A059] group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
@@ -467,11 +469,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 border border-[#222222] rounded text-[11px] font-mono uppercase tracking-[0.3em] text-[#C5A059] bg-[#141414]">
-            Institutional Mission
+            {t('Institutional Mission')}
           </div>
 
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.25] italic">
-            &ldquo;{COMPANY_INFO.mission}&rdquo;
+            &ldquo;{t(COMPANY_INFO.mission)}&rdquo;
           </h2>
 
           <div className="h-[1px] w-24 mx-auto my-8 bg-[#C5A059]" />
@@ -486,9 +488,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section id="values-section" className="py-20 sm:py-28 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Foundational Principles"
-            title="Core Team Values"
-            subtitle="Our consulting and leadership philosophy is anchored in five non-negotiable operational principles."
+            badge={t('Foundational Principles')}
+            title={t('Core Team Values')}
+            subtitle={t('Our consulting and leadership philosophy is anchored in five non-negotiable operational principles.')}
             align="center"
             theme="dark"
           />
@@ -508,16 +510,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   </div>
 
                   <h3 className="font-serif text-xl font-bold text-white group-hover:text-[#C5A059] transition-colors mb-3">
-                    {val.title}
+                    {t(val.title)}
                   </h3>
 
                   <p className="text-sm text-slate-400 leading-relaxed font-sans font-light">
-                    {val.description}
+                    {t(val.description)}
                   </p>
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-[#222222] text-[10px] uppercase font-mono tracking-widest text-slate-500">
-                  Elite Vanguard Operational Standard
+                  {t('Elite Vanguard Operational Standard')}
                 </div>
               </div>
             ))}
@@ -526,13 +528,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="p-8 rounded-xl border border-[#C5A059] bg-[#141414] flex flex-col justify-between">
               <div>
                 <span className="font-mono text-xs font-bold text-[#C5A059] uppercase tracking-widest">
-                  Leadership Alignment
+                  {t('Leadership Alignment')}
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white mt-3 mb-2">
-                  Instill These Values Into Your Frontline
+                  {t('Instill These Values Into Your Frontline')}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  Transform organizational culture and equip supervisors with decisive execution capabilities.
+                  {t('Transform organizational culture and equip supervisors with decisive execution capabilities.')}
                 </p>
               </div>
 
@@ -543,7 +545,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   size="sm"
                   className="w-full"
                 >
-                  Book a Consultation
+                  {t('Book a Consultation')}
                 </CTAButton>
               </div>
             </div>
@@ -555,9 +557,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section id="leadership-preview-section" className="py-20 bg-[#111111] border-t border-[#222222]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Executive Leadership"
-            title="Veteran Leadership & Frontline Command"
-            subtitle="Led by decorated military veterans with extensive track records across infrastructure, public transit, and commercial enterprises."
+            badge={t('Executive Leadership')}
+            title={t('Veteran Leadership & Frontline Command')}
+            subtitle={t('Led by decorated military veterans with extensive track records across infrastructure, public transit, and commercial enterprises.')}
             align="center"
             theme="dark"
           />
@@ -574,23 +576,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               </div>
               <div className="flex-1 space-y-2 text-center md:text-left">
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[#C5A059] block">
-                  {FOUNDER_PROFILES[0].badge}
+                  {t(FOUNDER_PROFILES[0].badge || '')}
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white">
                   {FOUNDER_PROFILES[0].name}
                 </h3>
                 <p className="text-xs text-[#C5A059] font-medium uppercase tracking-wider">
-                  {FOUNDER_PROFILES[0].role}
+                  {t(FOUNDER_PROFILES[0].role)}
                 </p>
                 <p className="text-xs text-slate-400 line-clamp-3 leading-relaxed">
-                  Decorated U.S. Army veteran, former Presidential Escort (3rd U.S. Infantry Regiment / The Old Guard), private equity operations veteran, and NYC Jacobi Hospital transportation supervisor.
+                  {t('Decorated U.S. Army veteran, former Presidential Escort (3rd U.S. Infantry Regiment / The Old Guard), private equity operations veteran, and NYC Jacobi Hospital transportation supervisor.')}
                 </p>
                 <div className="pt-2">
                   <button
                     onClick={() => onNavigate('team')}
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C5A059] hover:text-white uppercase tracking-wider cursor-pointer"
                   >
-                    <span>Read Executive Biography</span>
+                    <span>{t('Read Executive Biography')}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
@@ -608,23 +610,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               </div>
               <div className="flex-1 space-y-2 text-center md:text-left">
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[#C5A059] block">
-                  {FOUNDER_PROFILES[1].badge}
+                  {t(FOUNDER_PROFILES[1].badge || '')}
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white">
                   {FOUNDER_PROFILES[1].name}
                 </h3>
                 <p className="text-xs text-[#C5A059] font-medium uppercase tracking-wider">
-                  {FOUNDER_PROFILES[1].role}
+                  {t(FOUNDER_PROFILES[1].role)}
                 </p>
                 <p className="text-xs text-slate-400 line-clamp-3 leading-relaxed">
-                  U.S. Army veteran, retired Local Union #3 IBEW Journeyperson, transit infrastructure leader (Second Avenue Subway & Freedom Tower post-9/11 restoration), and dedicated community leader.
+                  {t('U.S. Army veteran, retired Local Union #3 IBEW Journeyperson, transit infrastructure leader (Second Avenue Subway & Freedom Tower post-9/11 restoration), and dedicated community leader.')}
                 </p>
                 <div className="pt-2">
                   <button
                     onClick={() => onNavigate('team')}
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C5A059] hover:text-white uppercase tracking-wider cursor-pointer"
                   >
-                    <span>Read Executive Biography</span>
+                    <span>{t('Read Executive Biography')}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
@@ -639,7 +641,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               size="md"
               icon="chevron"
             >
-              View Full Leadership Team & 4 Co-Founders
+              {t('View Full Leadership Team & 4 Co-Founders')}
             </CTAButton>
           </div>
         </div>
@@ -649,13 +651,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section id="final-cta-section" className="py-20 bg-[#0A0A0A] border-t border-[#222222]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <span className="text-xs font-mono uppercase tracking-[0.3em] text-[#C5A059]">
-            Confidential Executive Engagement
+            {t('Confidential Executive Engagement')}
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white">
-            Ready to Align Executive Strategy With Frontline Precision?
+            {t('Ready to Align Executive Strategy With Frontline Precision?')}
           </h2>
           <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
-            Schedule an initial consultation to discuss your organization's leadership development, operational rigor, and high-consequence performance goals.
+            {t("Schedule an initial consultation to discuss your organization's leadership development, operational rigor, and high-consequence performance goals.")}
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -666,14 +668,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               icon="arrow"
               className="w-full sm:w-auto"
             >
-              Book a Consultation
+              {t('Book a Consultation')}
             </CTAButton>
 
             <div
               className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg border border-[#222222] bg-[#141414] text-xs uppercase tracking-widest text-slate-400 w-full sm:w-auto"
             >
               <Phone className="w-4 h-4 text-slate-500" />
-              <span>Call Direct: [Phone - TBD]</span>
+              <span>{t('Call Direct: [Phone - TBD]')}</span>
             </div>
           </div>
         </div>
