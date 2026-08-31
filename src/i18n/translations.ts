@@ -20,11 +20,8 @@ export const ES_TRANSLATIONS: Record<string, string> = {
   'Contact': 'Contacto',
   'Book a Consultation': 'Reserve una Consulta',
   'Consultation': 'Consulta',
-  'Direct Contact: [Phone - TBD]': 'Contacto Directo: [Phone - TBD]',
   'Toggle navigation menu': 'Abrir menú de navegación',
   'Switch language': 'Cambiar idioma',
-  'Call Walter directly': 'Llamar directamente a Walter',
-  'Direct Phone Contact': 'Contacto telefónico directo',
 
   /* ------------------------------------------------------------------
    * Splash screen
@@ -357,7 +354,6 @@ export const ES_TRANSLATIONS: Record<string, string> = {
     '¿Listo para Alinear la Estrategia Ejecutiva con la Precisión de la Primera Línea?',
   "Schedule an initial consultation to discuss your organization's leadership development, operational rigor, and high-consequence performance goals.":
     'Programe una consulta inicial para tratar el desarrollo de liderazgo de su organización, el rigor operativo y sus objetivos de desempeño en entornos de alta consecuencia.',
-  'Call Direct: [Phone - TBD]': 'Llamada Directa: [Phone - TBD]',
 
   /* ------------------------------------------------------------------
    * About page
@@ -463,7 +459,6 @@ export const ES_TRANSLATIONS: Record<string, string> = {
     'Programe una consulta confidencial con Walter Horton y nuestro equipo de liderazgo para evaluar los desafíos operativos de su organización, las capacidades de sus supervisores y sus objetivos de desempeño en entornos de alta consecuencia.',
   'Direct Coordination': 'Coordinación Directa',
   'Lead Executive': 'Ejecutivo Principal',
-  'Direct Phone': 'Teléfono Directo',
   'Confidential Email': 'Correo Electrónico Confidencial',
   'All consultations and organizational inquiries are handled with strict executive confidentiality.':
     'Todas las consultas y solicitudes de las organizaciones se atienden con estricta confidencialidad ejecutiva.',
@@ -560,7 +555,6 @@ export const ES_TRANSLATIONS: Record<string, string> = {
     'Cierre la Brecha Crítica entre la Estrategia y la Ejecución en Primera Línea',
   'Equip your organization with the discipline, accountability, and operational precision needed to navigate complex, high-consequence environments.':
     'Dote a su organización de la disciplina, la responsabilidad y la precisión operativa necesarias para desenvolverse en entornos complejos y de alta consecuencia.',
-  'Direct: [Phone Number - TBD]': 'Directo: [Phone Number - TBD]',
   'A veteran-led management consulting and leadership development firm translating time-tested military principles into high-performance commercial and operational excellence.':
     'Una firma de consultoría de gestión y desarrollo de liderazgo dirigida por veteranos que traduce principios militares probados en el tiempo en excelencia comercial y operativa de alto rendimiento.',
   'Our Mission': 'Nuestra Misión',
@@ -880,5 +874,5 @@ export const ES_TRANSLATIONS: Record<string, string> = {
   'to diagnose operational bottlenecks and bridge the strategy-to-execution gap.':
     'para diagnosticar cuellos de botella operativos y cerrar la brecha entre estrategia y ejecución.',
   'Direct executive contact coordinates for': 'Datos de contacto ejecutivo directo de',
-  'Connect with Walter via phone or email.': 'Comuníquese con Walter por teléfono o correo electrónico.',
+  'Connect with Walter via email.': 'Comuníquese con Walter por correo electrónico.',
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { PageId } from '../types';
 import { COMPANY_INFO, TARGET_INDUSTRIES } from '../data/content';
 import { CTAButton } from './CTAButton';
-import { Phone, Mail, ArrowUpRight } from 'lucide-react';
+import { Mail, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 interface FooterProps {
@@ -48,10 +48,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
               >
                 {t('Book a Consultation')}
               </CTAButton>
-              <div className="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-widest text-slate-500 py-2">
-                <Phone className="w-3.5 h-3.5" />
-                <span>{t('Direct: [Phone Number - TBD]')}</span>
-              </div>
             </div>
           </div>
         </div>
@@ -144,14 +140,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
                 <span className="block text-[10px] uppercase tracking-wider text-slate-500">Leadership Contact</span>
                 <span className="font-semibold text-white">{COMPANY_INFO.contactPerson}</span>
               </div> */}
-
-              <div>
-                <span className="block text-[10px] uppercase tracking-wider text-slate-500">{t('Direct Telephone')}</span>
-                <div className="inline-flex items-center gap-2 text-slate-400 mt-0.5">
-                  <Phone className="w-3.5 h-3.5 text-slate-500" />
-                  <span>[Phone Number - TBD]</span>
-                </div>
-              </div>
 
               <div>
                 <span className="block text-[10px] uppercase tracking-wider text-slate-500">{t('Confidential Inquiries')}</span>

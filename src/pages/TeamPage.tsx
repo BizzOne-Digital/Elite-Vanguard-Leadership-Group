@@ -3,7 +3,7 @@ import { PageId } from '../types';
 import { FOUNDER_PROFILES, COMPANY_INFO } from '../data/content';
 import { SectionHeader } from '../components/SectionHeader';
 import { CTAButton } from '../components/CTAButton';
-import { Award, CheckCircle, UserCheck, ArrowRight, Phone } from 'lucide-react';
+import { Award, CheckCircle, UserCheck, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 interface TeamPageProps {
@@ -162,14 +162,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onNavigate }) => {
             icon="calendar"
           >
             {t('Book a Consultation')}
-          </CTAButton>
-          {/* <div
-            className="inline-flex items-center gap-2 px-6 py-3 border border-[#222222] rounded-lg bg-[#141414] text-xs font-medium uppercase tracking-widest text-slate-400"
-          >
-            <Phone className="w-4 h-4 text-slate-500" />
-            <span>Call: [Phone - TBD]</span>
-          </div> */}
-        </div>
+          </CTAButton>        </div>
       </section>
     </div>
   );

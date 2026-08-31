@@ -4,7 +4,6 @@ import { COMPANY_INFO, TARGET_INDUSTRIES } from '../data/content';
 import { CTAButton } from '../components/CTAButton';
 import {
 
-  Phone,
   Mail,
   Calendar,
   Clock,
@@ -102,17 +101,6 @@ export const BookingPage: React.FC<BookingPageProps> = ({ onNavigate }) => {
                 <div>
                   <span className="block text-[10px] uppercase tracking-wider text-[#C5A059]">{t('Lead Executive')}</span>
                   <span className="font-semibold text-white text-base">{COMPANY_INFO.contactPerson}</span>
-                </div>
-
-                <div>
-                  <span className="block text-[10px] uppercase tracking-wider text-[#C5A059]">{t('Direct Phone')}</span>
-                  <div
-                    id="booking-sidebar-phone"
-                    className="inline-flex items-center gap-2 text-sm font-mono text-slate-400 mt-0.5"
-                  >
-                    <Phone className="w-4 h-4 text-slate-500" />
-                    <span>[Phone - TBD]</span>
-                  </div>
                 </div>
 
                 <div>

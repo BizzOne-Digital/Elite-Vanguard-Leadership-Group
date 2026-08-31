@@ -4,7 +4,7 @@ import { COMPANY_INFO } from '../data/content';
 import { CTAButton } from './CTAButton';
 import { LanguageToggle } from './LanguageToggle';
 import { useLanguage } from '../i18n/LanguageContext';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: PageId;
@@ -96,18 +96,9 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             })}
           </nav>
 
-          {/* Desktop Right Actions: Phone + Primary CTA */}
+          {/* Desktop Right Actions: Primary CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <LanguageToggle id="nav-language-toggle" />
-
-            <div
-              id="nav-quick-phone"
-              className="flex items-center gap-2 text-xs tracking-wider text-slate-500 py-1.5 px-3 rounded-lg border border-[#222222] bg-[#111111]"
-              title="Phone number - TBD"
-            >
-              <Phone className="w-3.5 h-3.5 text-slate-500" />
-              <span className="font-mono text-xs text-slate-400">[Phone - TBD]</span>
-            </div>
 
             <CTAButton
               id="nav-cta-consultation"
@@ -180,14 +171,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             })}
 
             <div className="pt-6 mt-4 border-t border-[#222222] flex flex-col gap-4">
-              <div
-                id="mobile-phone-link"
-                className="flex items-center gap-3 text-sm text-slate-400 px-3 py-2 bg-[#111111] rounded-lg border border-[#222222]"
-              >
-                <Phone className="w-4 h-4 text-slate-500" />
-                <span>{t('Direct Contact: [Phone - TBD]')}</span>
-              </div>
-
               <CTAButton
                 id="mobile-drawer-cta"
                 onClick={() => handleNavClick('booking')}

@@ -10,8 +10,7 @@ import { ServicesPage } from './pages/ServicesPage';
 import { TeamPage } from './pages/TeamPage';
 import { BookingPage } from './pages/BookingPage';
 import { ContactPage } from './pages/ContactPage';
-import { Phone, Calendar, Sparkles } from 'lucide-react';
-import { COMPANY_INFO } from './data/content';
+import { Calendar, Sparkles } from 'lucide-react';
 import { useLanguage } from './i18n/LanguageContext';
 
 const VALID_PAGES: PageId[] = ['home', 'about', 'services', 'team', 'booking', 'contact'];
@@ -112,15 +111,6 @@ export default function App() {
       {/* Quick Consultation Floating Pill on Mobile / Desktop */}
       {currentPage !== 'booking' && (
         <div className="fixed bottom-5 right-5 z-40 flex items-center gap-2">
-          <a
-            href={COMPANY_INFO.phoneLink}
-            title={t('Call Walter directly')}
-            className="w-11 h-11 rounded-full bg-[#141414] border border-[#222222] text-[#C5A059] hover:text-[#0A0A0A] hover:bg-[#C5A059] hover:border-[#C5A059] shadow-xl flex items-center justify-center transition-all duration-300 active:scale-95"
-            aria-label={t('Direct Phone Contact')}
-          >
-            <Phone className="w-5 h-5" />
-          </a>
-
           <button
             onClick={() => navigateTo('booking')}
             className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#C5A059] text-[#0A0A0A] text-xs uppercase tracking-widest font-bold shadow-2xl hover:bg-[#D4AF37] transition-all duration-300 cursor-pointer border border-[#C5A059] active:scale-95"

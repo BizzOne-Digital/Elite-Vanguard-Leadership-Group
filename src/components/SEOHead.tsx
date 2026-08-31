@@ -26,7 +26,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ page }) => {
       services: t('Explore practice areas: Leadership Development, Management Consulting, Operational Excellence, Frontline Leadership, Corporate Leadership Academies, and Strategic Execution.'),
       team: `${t('Meet the leadership of')} ${COMPANY_INFO.name}${t(', including Walter Horton (3rd U.S. Infantry Regiment / The Old Guard veteran) and Trevor McLeod (U.S. Army veteran & IBEW Local #3 Journeyperson).')}`,
       booking: `${t('Schedule a confidential executive consultation with')} ${COMPANY_INFO.name} ${t('to diagnose operational bottlenecks and bridge the strategy-to-execution gap.')}`,
-      contact: `${t('Direct executive contact coordinates for')} ${COMPANY_INFO.name}. ${t('Connect with Walter via phone or email.')}`,
+      contact: `${t('Direct executive contact coordinates for')} ${COMPANY_INFO.name}. ${t('Connect with Walter via email.')}`,
     };
 
     document.title = titles[page] || titles.home;
@@ -65,11 +65,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ page }) => {
           "alternateName": COMPANY_INFO.name,
           "description": t(COMPANY_INFO.description),
           "email": "[Email - TBD]",
-          "telephone": "[Phone - TBD]",
           "contactPoint": [
             {
               "@type": "ContactPoint",
-              "telephone": "[Phone - TBD]",
               "contactType": "Executive Consultation",
               "name": COMPANY_INFO.contactPerson,
               "availableLanguage": ["English", "Spanish"]

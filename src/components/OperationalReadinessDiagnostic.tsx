@@ -301,7 +301,7 @@ export const OperationalReadinessDiagnostic: React.FC<OperationalReadinessDiagno
               icon="arrow"
               className="w-full justify-center shadow-xl"
             >
-              {t('Discuss Findings With Walter')}
+              {t('Discuss Findings With Us')}
             </CTAButton>
             <p className="text-[11px] text-slate-400 text-center mt-2 font-mono">
               {t('Confidential executive review with lead consultant.')}

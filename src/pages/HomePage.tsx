@@ -18,7 +18,6 @@ import {
   Building2,
   Award,
   ChevronRight,
-  Phone,
   Sparkles,
   TrendingUp,
   Briefcase
@@ -108,15 +107,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
           {/* Direct Coordinate Trigger */}
           <div className="mt-8 pt-6 border-t border-[#222222] flex items-center justify-center gap-6 text-xs text-slate-400">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-              <span className="text-[#C5A059] font-medium tracking-wider">{t('Direct Engagement:')}</span>
-              <span className="font-mono text-slate-400">
-                [Phone - TBD]
-              </span>
-            </div>
-            <span className="hidden sm:inline text-slate-600">|</span>
-            <span className="hidden sm:inline tracking-wider text-slate-400">
+            <span className="tracking-wider text-slate-400">
               {COMPANY_INFO.contactPerson} • [Email - TBD]
             </span>
           </div>
@@ -670,13 +661,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             >
               {t('Book a Consultation')}
             </CTAButton>
-
-            <div
-              className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg border border-[#222222] bg-[#141414] text-xs uppercase tracking-widest text-slate-400 w-full sm:w-auto"
-            >
-              <Phone className="w-4 h-4 text-slate-500" />
-              <span>{t('Call Direct: [Phone - TBD]')}</span>
-            </div>
           </div>
         </div>
       </section>

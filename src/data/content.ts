@@ -4,10 +4,7 @@ export const COMPANY_INFO = {
   name: "Elite Vanguard Leadership Group",
   legalName: "Elite Vanguard Leadership Group LLC",
   // contactPerson: "Walter",
-  email: "whorton1104@yahoo.com",
-  phoneRaw: "2406051962",
-  phoneFormatted: "(240) 605-1962",
-  phoneLink: "tel:2406051962",
+  email: "",
   tagline: "Translating Military Principles into High-Performance Operational Excellence",
   positioning: "Luxury Executive Consulting × Veteran Leadership × Operational Excellence × Institutional Authority",
 

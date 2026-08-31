@@ -3,7 +3,6 @@ import { PageId } from '../types';
 import { COMPANY_INFO } from '../data/content';
 import { CTAButton } from '../components/CTAButton';
 import {
-  Phone,
   Mail,
   User,
   Send,
@@ -103,27 +102,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     </span>
                     <span className="text-xs text-slate-400 block">
                       {t('Executive Leadership & Consulting')}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Telephone */}
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 border border-[#222222] bg-[#111111] rounded-lg flex items-center justify-center shrink-0">
-                    <Phone className="w-5 h-5 text-slate-500" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#C5A059] block">
-                      {t('Direct Telephone')}
-                    </span>
-                    <div
-                      id="contact-phone-direct"
-                      className="text-base font-mono font-bold text-slate-400 block mt-0.5"
-                    >
-                      [Phone Number - TBD]
-                    </div>
-                    <span className="text-xs text-slate-500">
-                      {t('Direct Line • Prompt Executive Response')}
                     </span>
                   </div>
                 </div>
