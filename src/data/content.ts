@@ -3,7 +3,7 @@ import { TargetIndustry, FounderProfile, CoreValue, ServiceCategory } from '../t
 export const COMPANY_INFO = {
   name: "Elite Vanguard Leadership Group",
   legalName: "Elite Vanguard Leadership Group LLC",
-  contactPerson: "Walter",
+  // contactPerson: "Walter",
   email: "whorton1104@yahoo.com",
   phoneRaw: "2406051962",
   phoneFormatted: "(240) 605-1962",
@@ -145,13 +145,13 @@ export const FOUNDER_PROFILES: FounderProfile[] = [
     role: "Co-Founder & US Army veteran",
     badge: "",
     // Verbatim Biography (DO NOT MODIFY)
-    bio: "Trevor McLeod is a U.S. Army veteran, retired Local Union #3 International Brotherhood of Electrical Workers Journeyperson, and dedicated community leader defined by his service, mentorship, and work ethic. Throughout a distinguished trade career, Trevor led complex infrastructure and transit initiatives across New York City—including major projects on the Second Avenue Subway line and post-9/11 restoration at the Freedom Tower—frequently stepping up wherever skilled leadership was required. A Prince Hall Mason holding key positions such as Junior Warden and District Deputy Grand Patron, he consistently gives back by organizing annual NYC Kidney and Prostate Cancer walks, coaching championship Pop Warner youth football, and serving as a primary organizer for middle and high school job fairs. Even in retirement, Trevor leads by example within the electrical industry by proctoring journeyperson exams, interviewing apprentices, and actively guiding the next generation—including his son—toward excellence.",
+    bio: "Trevor McLeod is a U.S. Army veteran, retired Local Union #3 International Brotherhood of Electrical Workers Journeyperson, and dedicated community leader defined by his service, mentorship, and work ethic. Throughout a distinguished trade career, Trevor led complex infrastructure and transit initiatives across New York City—including major projects on the Second Avenue Subway line and post-9/11 restoration at the Freedom Tower—frequently stepping up wherever skilled leadership was required. A Prince Hall Mason holding key position as District Deputy Grand Patron, he consistently gives back by organizing annual NYC Kidney and Prostate Cancer walks, coaching championship Pop Warner youth football, and serving as a primary organizer for middle and high school job fairs. Even in retirement, Trevor leads by example within the electrical industry by proctoring journeyperson exams, interviewing apprentices, and actively guiding the next generation—including his son—toward excellence.",
     image: "./public/image/Trevor.jpg",
     highlights: [
       "U.S. Army Veteran",
       "Retired Local Union #3 IBEW Journeyperson",
       "Infrastructure Leader: Second Avenue Subway & Freedom Tower Post-9/11 Restoration",
-      "Prince Hall Mason (Junior Warden & District Deputy Grand Patron)",
+      "Prince Hall Mason (District Deputy Grand Patron)",
       "Electrical Industry Exam Proctor & Apprentice Interviewer",
       "Community Organizer: Health Walks, Pop Warner Football & Career Fairs"
     ],

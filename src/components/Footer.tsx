@@ -138,10 +138,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
             </h4>
 
             <div className="space-y-3 text-xs sm:text-sm text-slate-300">
-              <div>
+              {/* <div>
                 <span className="block text-[10px] uppercase tracking-wider text-slate-500">Leadership Contact</span>
                 <span className="font-semibold text-white">{COMPANY_INFO.contactPerson}</span>
-              </div>
+              </div> */}
 
               <div>
                 <span className="block text-[10px] uppercase tracking-wider text-slate-500">Direct Telephone</span>

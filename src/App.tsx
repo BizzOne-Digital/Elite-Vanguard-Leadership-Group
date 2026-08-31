@@ -13,8 +13,15 @@ import { ContactPage } from './pages/ContactPage';
 import { Phone, Calendar, Sparkles } from 'lucide-react';
 import { COMPANY_INFO } from './data/content';
 
+const VALID_PAGES: PageId[] = ['home', 'about', 'services', 'team', 'booking', 'contact'];
+
+const getPageFromPath = (): PageId => {
+  const segment = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+  return (VALID_PAGES as string[]).includes(segment) ? (segment as PageId) : 'home';
+};
+
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<PageId>('home');
+  const [currentPage, setCurrentPage] = useState<PageId>(getPageFromPath);
   const [showSplash, setShowSplash] = useState<boolean>(() => {
     // Check if splash has already run in this session
     try {
@@ -38,43 +45,40 @@ export default function App() {
     setShowSplash(true);
   };
 
-  // Initialize always on 'home' screen upon page load/refresh
+  // Resolve the current page from the URL path on load/refresh, and keep it in
+  // sync with browser back/forward navigation.
   useEffect(() => {
-    // If there is any stale hash like #contact on initial load, clean it up so home is the default landing
-    if (window.location.hash) {
+    // Normalize legacy hash URLs (e.g. /#contact) to their proper route (/contact)
+    const legacyHash = window.location.hash.replace('#', '').toLowerCase();
+    if (legacyHash && (VALID_PAGES as string[]).includes(legacyHash)) {
       try {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
+        history.replaceState(null, '', `/${legacyHash}${window.location.search}`);
       } catch {
-        window.location.hash = '';
+        // Ignore if history API is unavailable
       }
+      setCurrentPage(legacyHash as PageId);
+    } else {
+      setCurrentPage(getPageFromPath());
     }
-    setCurrentPage('home');
 
     // Handle back/forward navigation
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '') as PageId;
-      const validPages: PageId[] = ['home', 'about', 'services', 'team', 'booking', 'contact'];
-      if (validPages.includes(hash)) {
-        setCurrentPage(hash);
-      } else if (!hash) {
-        setCurrentPage('home');
-      }
+    const handlePopState = () => {
+      setCurrentPage(getPageFromPath());
     };
 
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   const navigateTo = (page: PageId) => {
     setCurrentPage(page);
     try {
-      if (page === 'home') {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
-      } else {
-        history.pushState(null, '', `#${page}`);
+      const target = `/${page}${window.location.search}`;
+      if (window.location.pathname + window.location.search !== target) {
+        history.pushState(null, '', target);
       }
     } catch {
-      window.location.hash = page === 'home' ? '' : page;
+      window.location.pathname = `/${page}`;
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

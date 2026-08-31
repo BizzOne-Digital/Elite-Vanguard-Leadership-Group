@@ -146,10 +146,10 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onNavigate }) => {
       {/* Direct Engagement CTA */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
-          Connect Directly With Walter
+          Book A Consultation
         </h2>
         <p className="text-sm sm:text-base text-slate-400 max-w-xl mx-auto mb-8 font-light">
-          Reach out directly to discuss high-level strategic alignment, operational consulting engagements, or leadership development cohorts.
+          Reach out to discuss high-level strategic alignment, operational consulting engagements, or leadership development cohorts.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -161,12 +161,12 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onNavigate }) => {
           >
             Book a Consultation
           </CTAButton>
-          <div
+          {/* <div
             className="inline-flex items-center gap-2 px-6 py-3 border border-[#222222] rounded-lg bg-[#141414] text-xs font-medium uppercase tracking-widest text-slate-400"
           >
             <Phone className="w-4 h-4 text-slate-500" />
             <span>Call: [Phone - TBD]</span>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
