@@ -65,9 +65,9 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onNavigate }) => {
 
                     {/* Image Placeholder Info Indicator for Future Client Replacement */}
                     <div className="mt-2 text-center">
-                      <span className="text-[10px] font-mono tracking-widest text-slate-500 uppercase">
+                      {/* <span className="text-[10px] font-mono tracking-widest text-slate-500 uppercase">
                         {t('Asset Path')}: /public/images/team/{founder.id}.jpg
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </div>
