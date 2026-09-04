@@ -118,8 +118,8 @@ export const ES_TRANSLATIONS: Record<string, string> = {
    * Founder profiles (data/content.ts)
    * ------------------------------------------------------------------ */
   'Co-Founder & US Army veteran': 'Cofundador y veterano del Ejército de EE. UU.',
-  'Leadership is foundational for Walter Horton, born from early mentorship under his father—a master’s in physical education holder—and honed across military, corporate, municipal, and entrepreneurial sectors. A decorated U.S. Army veteran, Walter earned his leadership certification in 1986 in Baumholder, West Germany, before serving as cadre in Bad Kreuznach, where he directed daily operations for 35 to 80 newly arrived troops under the command of Lt. Gen. Calvin Waller and Gen. Colin Powell. He was personally selected by Command Sergeant Major Maurice Zepeda for assignment to the prestigious 3rd U.S. Infantry Regiment (The Old Guard) at Fort Myer, serving as an escort to the President of the United States. During the summer 1987 Twilight Tattoo on The Ellipse, Walter was recognized in formation when Secretary of State George P. Shultz—serving as Honorary Reviewing Officer on behalf of President Reagan—walked the ranks to present him with the regimental crest pin. Walter seamlessly transitioned this operational discipline into the private sector, driving key initiatives for private equity firms in Washington, D.C. and New York, before serving as Supervisor of Transportation at NYC’s Jacobi Hospital, managing a 38-person team. After relocating to Maryland, he launched his own successful business enterprise and was inducted into the Rotary Club of Midtown Baltimore by his mentor, real estate mogul J.R. Owens—continuing a lifelong legacy of driving team success, accountability, and community leadership.':
-    'El liderazgo es fundamental para Walter Horton, nacido de la mentoría temprana de su padre —titulado con una maestría en educación física— y perfeccionado en los sectores militar, corporativo, municipal y empresarial. Veterano condecorado del Ejército de EE. UU., Walter obtuvo su certificación en liderazgo en 1986 en Baumholder, Alemania Occidental, antes de servir como cuadro de mando en Bad Kreuznach, donde dirigió las operaciones diarias de 35 a 80 soldados recién llegados bajo el mando del Tte. Gral. Calvin Waller y el Gral. Colin Powell. Fue seleccionado personalmente por el Sargento Mayor de Comando Maurice Zepeda para incorporarse al prestigioso 3.er Regimiento de Infantería de EE. UU. (The Old Guard) en Fort Myer, donde sirvió como escolta del Presidente de los Estados Unidos. Durante el Twilight Tattoo del verano de 1987 en The Ellipse, Walter fue reconocido en formación cuando el Secretario de Estado George P. Shultz —actuando como Oficial Revisor Honorario en representación del Presidente Reagan— recorrió las filas para entregarle el distintivo con el escudo del regimiento. Walter trasladó esta disciplina operativa al sector privado sin dificultad, impulsando iniciativas clave para firmas de capital privado en Washington, D.C. y Nueva York, antes de desempeñarse como Supervisor de Transporte en el Jacobi Hospital de Nueva York, donde gestionó un equipo de 38 personas. Tras trasladarse a Maryland, fundó su propia empresa exitosa y fue incorporado al Rotary Club de Midtown Baltimore por su mentor, el magnate inmobiliario J.R. Owens, continuando así un legado de toda una vida dedicado a impulsar el éxito de los equipos, la responsabilidad y el liderazgo comunitario.',
+  'Leadership is foundational for Walter Horton, born from early mentorship under his father—a master’s in physical education holder—and honed across military, corporate, municipal, and entrepreneurial sectors. A decorated U.S. Army veteran, Walter earned his leadership certification in 1986 in Baumholder, West Germany, before serving as cadre in Bad Kreuznach, where he directed daily operations for 35 to 80 newly arrived troops under the command of Lt. Gen. Calvin Waller and Gen. Colin Powell. He was personally selected by Command Sergeant Major Maurice Zepeda for assignment to the prestigious 3rd U.S. Infantry Regiment (The Old Guard) at Fort Myer, serving as an escort to the President of the United States. CSM Zepeda served as the Command Sergeant Major of Fort Myer, Arlington, Virginia (part of the U.S. Army Military District of Washington). During the summer 1987 Twilight Tattoo on The Ellipse, Walter was recognized in formation when Secretary of State George P. Shultz—serving as Honorary Reviewing Officer on behalf of President Reagan—walked the ranks to present him with the regimental crest pin. Walter seamlessly transitioned this operational discipline into the private sector, driving key initiatives for private equity firms in Washington, D.C. and New York, before serving as Supervisor of Transportation at NYC’s Jacobi Hospital, managing a 38-person team. After relocating to Maryland, he launched his own successful business enterprise and was inducted into the Rotary Club of Midtown Baltimore by his mentor, real estate mogul J.R. Owens—continuing a lifelong legacy of driving team success, accountability, and community leadership.':
+    'El liderazgo es fundamental para Walter Horton, nacido de la mentoría temprana de su padre —titulado con una maestría en educación física— y perfeccionado en los sectores militar, corporativo, municipal y empresarial. Veterano condecorado del Ejército de EE. UU., Walter obtuvo su certificación en liderazgo en 1986 en Baumholder, Alemania Occidental, antes de servir como cuadro de mando en Bad Kreuznach, donde dirigió las operaciones diarias de 35 a 80 soldados recién llegados bajo el mando del Tte. Gral. Calvin Waller y el Gral. Colin Powell. Fue seleccionado personalmente por el Sargento Mayor de Comando Maurice Zepeda para incorporarse al prestigioso 3.er Regimiento de Infantería de EE. UU. (The Old Guard) en Fort Myer, donde sirvió como escolta del Presidente de los Estados Unidos. El Sargento Mayor de Comando Zepeda se desempeñó como Sargento Mayor de Comando de Fort Myer, Arlington, Virginia (parte del Distrito Militar de Washington del Ejército de EE. UU.). Durante el Twilight Tattoo del verano de 1987 en The Ellipse, Walter fue reconocido en formación cuando el Secretario de Estado George P. Shultz —actuando como Oficial Revisor Honorario en representación del Presidente Reagan— recorrió las filas para entregarle el distintivo con el escudo del regimiento. Walter trasladó esta disciplina operativa al sector privado sin dificultad, impulsando iniciativas clave para firmas de capital privado en Washington, D.C. y Nueva York, antes de desempeñarse como Supervisor de Transporte en el Jacobi Hospital de Nueva York, donde gestionó un equipo de 38 personas. Tras trasladarse a Maryland, fundó su propia empresa exitosa y fue incorporado al Rotary Club de Midtown Baltimore por su mentor, el magnate inmobiliario J.R. Owens, continuando así un legado de toda una vida dedicado a impulsar el éxito de los equipos, la responsabilidad y el liderazgo comunitario.',
   '3rd U.S. Infantry Regiment (The Old Guard) Presidential Escort':
     'Escolta Presidencial del 3.er Regimiento de Infantería de EE. UU. (The Old Guard)',
   'Cadre Leader under Gen. Colin Powell & Lt. Gen. Calvin Waller Command':
@@ -875,4 +875,57 @@ export const ES_TRANSLATIONS: Record<string, string> = {
     'para diagnosticar cuellos de botella operativos y cerrar la brecha entre estrategia y ejecución.',
   'Direct executive contact coordinates for': 'Datos de contacto ejecutivo directo de',
   'Connect with Walter via email.': 'Comuníquese con Walter por correo electrónico.',
+  // About Page — Company Mantra
+  'Our Mantra': 'Nuestro Lema',
+  'Never Have So Few Done So Much For So Many!':
+    '¡Nunca Tan Pocos Hicieron Tanto Por Tantos!',
+
+  // Events Page — Community & Non-Profit Involvement
+  'Events': 'Eventos',
+  'Community & Non-Profit Involvement': 'Participación Comunitaria y con Organizaciones sin Fines de Lucro',
+  'Community Events & Non-Profit Involvement': 'Eventos Comunitarios y Participación sin Fines de Lucro',
+  'Every member of our leadership works with or partners alongside non-profit organizations. Service does not stop at the boardroom — we stay actively involved in the communities we serve.':
+    'Cada miembro de nuestro liderazgo trabaja con organizaciones sin fines de lucro o se asocia con ellas. El servicio no termina en la sala de juntas: seguimos participando activamente en las comunidades a las que servimos.',
+  'Upcoming Event': 'Próximo Evento',
+  'Past Event': 'Evento Pasado',
+  'Community Partner & Walk Participant': 'Socio Comunitario y Participante de la Caminata',
+  'Community Partner & Attendee': 'Socio Comunitario y Asistente',
+  'Date': 'Fecha',
+  'Time': 'Hora',
+  'Location': 'Ubicación',
+  'Cause': 'Causa',
+  'Event Details': 'Detalles del Evento',
+  'Get Involved': 'Participe',
+  'Community Standard': 'Estándar Comunitario',
+  'Leadership is measured by service. We show up for the communities that raised us — not for recognition, but because presence is the standard we teach.':
+    'El liderazgo se mide por el servicio. Estamos presentes para las comunidades que nos formaron, no por reconocimiento, sino porque la presencia es el estándar que enseñamos.',
+  'Core Value: Service Before Self': 'Valor Fundamental: Servicio Antes que Uno Mismo',
+  'Non-Profit Partnerships': 'Alianzas con Organizaciones sin Fines de Lucro',
+  'Partner With Us On Your Next Event': 'Asóciese con Nosotros en su Próximo Evento',
+  'If your organization is planning a community initiative, fundraiser, or leadership event, reach out — we welcome the opportunity to serve alongside you.':
+    'Si su organización está planificando una iniciativa comunitaria, una recaudación de fondos o un evento de liderazgo, comuníquese con nosotros: agradecemos la oportunidad de servir a su lado.',
+  'Community events and non-profit initiatives supported by Elite Vanguard Leadership Group, including the Kings Men For Kidney Disease walk benefiting the National Kidney Foundation and the DMV Prince Hall Takeover.':
+    'Eventos comunitarios e iniciativas sin fines de lucro respaldados por Elite Vanguard Leadership Group, incluida la caminata Kings Men For Kidney Disease en beneficio de la National Kidney Foundation y el DMV Prince Hall Takeover.',
+
+  // Events Page — Event Content
+  'Kings Men For Kidney Disease': 'Kings Men For Kidney Disease',
+  'November 08, 2026': '08 de noviembre de 2026',
+  'NYC Kidney Walk — New York, NY': 'NYC Kidney Walk — Nueva York, NY',
+  'Supporting the National Kidney Foundation': 'En apoyo a la National Kidney Foundation',
+  'A Sons of Kings Lodge #123 initiative in support of the incredible work of the National Kidney Foundation. We walk to honor those living with kidney disease, support their families, and remember those we have lost — walking together for hope, healing, and a cure.':
+    'Una iniciativa de Sons of Kings Lodge #123 en apoyo al extraordinario trabajo de la National Kidney Foundation. Caminamos para honrar a quienes viven con enfermedad renal, apoyar a sus familias y recordar a quienes hemos perdido, caminando juntos por la esperanza, la sanación y una cura.',
+  'Presented by Sons of Kings Lodge #123': 'Presentado por Sons of Kings Lodge #123',
+  'Benefiting the National Kidney Foundation': 'En beneficio de la National Kidney Foundation',
+  'Bro. Roland Duroseau, Worshipful Master': 'Bro. Roland Duroseau, Worshipful Master',
+  'MW Darren M. Morton, Grand Master': 'MW Darren M. Morton, Grand Master',
+  'DMV Prince Hall Takeover 6': 'DMV Prince Hall Takeover 6',
+  'Wednesday, September 23, 2026': 'Miércoles, 23 de septiembre de 2026',
+  'Invictus II Cigars — 2068 Crain Hwy, Waldorf, MD 20601': 'Invictus II Cigars — 2068 Crain Hwy, Waldorf, MD 20601',
+  'Fellowship, Networking & Community Building': 'Confraternidad, Networking y Construcción Comunitaria',
+  'One family. Great vibes. An evening of fellowship, networking, and community connection bringing brothers and partner organizations across the DMV together. Indoor and outdoor seating, DJ, and food on site. $10 purchase fee.':
+    'Una sola familia. Excelente ambiente. Una velada de confraternidad, networking y conexión comunitaria que reúne a hermanos y organizaciones aliadas de toda la región DMV. Espacios interiores y exteriores, DJ y comida en el lugar. Cuota de compra de $10.',
+  'Indoors & outdoors seating': 'Espacios interiores y exteriores',
+  'DJ and live music': 'DJ y música en vivo',
+  'Food served on site': 'Comida servida en el lugar',
+  '$10 purchase fee': 'Cuota de compra de $10',
 };

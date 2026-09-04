@@ -14,8 +14,26 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
   const { t } = useLanguage();
   return (
     <div id="about-page" className="w-full pt-28 sm:pt-32 pb-20 bg-[#0A0A0A] text-slate-300">
+      {/* COMPANY MANTRA — Bold Opening Statement */}
+      <section id="about-company-mantra" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14 mt-5 sm:mb-20">
+        <div className="relative border border-[#C5A059]/40 bg-gradient-to-b from-[#161616] to-[#0F0F0F] rounded-xl px-6 py-10 sm:px-12 sm:py-14 shadow-2xl overflow-hidden text-center">
+          {/* Brass Accent Rails */}
+          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C5A059] to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#C5A059]/50 to-transparent" />
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-[1.15] uppercase">
+            &ldquo;{t(COMPANY_INFO.mantra)}&rdquo;
+          </h2>
+
+          <div className="h-[1px] w-24 mx-auto mt-7 bg-gradient-to-r from-transparent via-[#C5A059] to-transparent" />
+
+          <p className="mt-5 text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-slate-400">
+            Elite Vanguard Leadership Group LLC
+          </p>
+        </div>
+      </section>
+
       {/* Header Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16  sm:mb-24">
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 border border-[#222222] rounded text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-[#C5A059] bg-[#141414]">
             <img src="/image/logo.png" alt="Elite Vanguard" className="w-3.5 h-3.5 rounded" />

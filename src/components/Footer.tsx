@@ -94,6 +94,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onReplaySplash }) =>
                 { id: 'about', label: 'About Us' },
                 { id: 'services', label: 'Services' },
                 { id: 'team', label: 'Our Team' },
+                { id: 'events', label: 'Events' },
                 { id: 'booking', label: 'Booking' },
                 { id: 'contact', label: 'Contact' },
               ].map((item) => (

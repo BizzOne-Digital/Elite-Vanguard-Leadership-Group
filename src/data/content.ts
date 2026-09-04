@@ -1,4 +1,4 @@
-import { TargetIndustry, FounderProfile, CoreValue, ServiceCategory } from '../types';
+import { TargetIndustry, FounderProfile, CoreValue, ServiceCategory, CommunityEvent } from '../types';
 
 export const COMPANY_INFO = {
   name: "Elite Vanguard Leadership Group",
@@ -10,6 +10,9 @@ export const COMPANY_INFO = {
 
   // Verbatim Company Description (DO NOT MODIFY)
   description: "Elite Vanguard Leadership Group LLC is a veteran-led management consulting and leadership development firm dedicated to translating time-tested military principles into high-performance commercial and operational excellence. The firm specializes in bridging the critical gap between executive strategy and frontline execution, equipping organizations with the discipline, accountability, and operational precision needed to navigate complex, high-stakes environments.",
+
+  // Verbatim Company Mantra (DO NOT MODIFY)
+  mantra: "Never Have So Few Done So Much For So Many!",
 
   // Verbatim Mission Statement (DO NOT MODIFY)
   mission: "To equip organizations and frontline leaders with the discipline, operational rigor, and decisive execution of battle-tested military leadership, bridging the gap between executive strategy and field performance to achieve uncompromising mission success.",
@@ -124,7 +127,7 @@ export const FOUNDER_PROFILES: FounderProfile[] = [
     role: "Co-Founder & US Army veteran",
     badge: "",
     // Verbatim Biography (DO NOT MODIFY)
-    bio: "Leadership is foundational for Walter Horton, born from early mentorship under his father—a master’s in physical education holder—and honed across military, corporate, municipal, and entrepreneurial sectors. A decorated U.S. Army veteran, Walter earned his leadership certification in 1986 in Baumholder, West Germany, before serving as cadre in Bad Kreuznach, where he directed daily operations for 35 to 80 newly arrived troops under the command of Lt. Gen. Calvin Waller and Gen. Colin Powell. He was personally selected by Command Sergeant Major Maurice Zepeda for assignment to the prestigious 3rd U.S. Infantry Regiment (The Old Guard) at Fort Myer, serving as an escort to the President of the United States. During the summer 1987 Twilight Tattoo on The Ellipse, Walter was recognized in formation when Secretary of State George P. Shultz—serving as Honorary Reviewing Officer on behalf of President Reagan—walked the ranks to present him with the regimental crest pin. Walter seamlessly transitioned this operational discipline into the private sector, driving key initiatives for private equity firms in Washington, D.C. and New York, before serving as Supervisor of Transportation at NYC’s Jacobi Hospital, managing a 38-person team. After relocating to Maryland, he launched his own successful business enterprise and was inducted into the Rotary Club of Midtown Baltimore by his mentor, real estate mogul J.R. Owens—continuing a lifelong legacy of driving team success, accountability, and community leadership.",
+    bio: "Leadership is foundational for Walter Horton, born from early mentorship under his father—a master’s in physical education holder—and honed across military, corporate, municipal, and entrepreneurial sectors. A decorated U.S. Army veteran, Walter earned his leadership certification in 1986 in Baumholder, West Germany, before serving as cadre in Bad Kreuznach, where he directed daily operations for 35 to 80 newly arrived troops under the command of Lt. Gen. Calvin Waller and Gen. Colin Powell. He was personally selected by Command Sergeant Major Maurice Zepeda for assignment to the prestigious 3rd U.S. Infantry Regiment (The Old Guard) at Fort Myer, serving as an escort to the President of the United States. CSM Zepeda served as the Command Sergeant Major of Fort Myer, Arlington, Virginia (part of the U.S. Army Military District of Washington). During the summer 1987 Twilight Tattoo on The Ellipse, Walter was recognized in formation when Secretary of State George P. Shultz—serving as Honorary Reviewing Officer on behalf of President Reagan—walked the ranks to present him with the regimental crest pin. Walter seamlessly transitioned this operational discipline into the private sector, driving key initiatives for private equity firms in Washington, D.C. and New York, before serving as Supervisor of Transportation at NYC’s Jacobi Hospital, managing a 38-person team. After relocating to Maryland, he launched his own successful business enterprise and was inducted into the Rotary Club of Midtown Baltimore by his mentor, real estate mogul J.R. Owens—continuing a lifelong legacy of driving team success, accountability, and community leadership.",
     image: "/image/walter.jpg",
     highlights: [
       "3rd U.S. Infantry Regiment (The Old Guard) Presidential Escort",
@@ -301,5 +304,48 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       "Action Review (AAR) Protocols",
       "Milestone Tracking & Governance Tooling"
     ]
+  }
+];
+
+// Community & Non-Profit Involvement
+// Every partner and principal of the firm works with or partners alongside
+// non-profit organizations, so community events are a standing part of our calendar.
+export const COMMUNITY_EVENTS: CommunityEvent[] = [
+  {
+    id: "kings-men-for-kidney-disease",
+    title: "Kings Men For Kidney Disease",
+    organization: "Sons of Kings Lodge #123 (MWPHGLofNY)",
+    role: "Community Partner & Walk Participant",
+    date: "November 08, 2026",
+    location: "NYC Kidney Walk — New York, NY",
+    cause: "Supporting the National Kidney Foundation",
+    description: "A Sons of Kings Lodge #123 initiative in support of the incredible work of the National Kidney Foundation. We walk to honor those living with kidney disease, support their families, and remember those we have lost — walking together for hope, healing, and a cure.",
+    image: "/image/kidney.jpg",
+    highlights: [
+      "Presented by Sons of Kings Lodge #123",
+      "Benefiting the National Kidney Foundation",
+      "Bro. Roland Duroseau, Worshipful Master",
+      "MW Darren M. Morton, Grand Master"
+    ],
+    status: "upcoming"
+  },
+  {
+    id: "dmv-prince-hall-takeover-6",
+    title: "DMV Prince Hall Takeover 6",
+    organization: "DMV Prince Hall",
+    role: "Community Partner & Attendee",
+    date: "Wednesday, September 23, 2026",
+    time: "6:00 PM – 10:00 PM",
+    location: "2068 Crain Hwy, Waldorf, MD 20601",
+    cause: "Fellowship, Networking & Community Building",
+    description: "One family. Great vibes. An evening of fellowship, networking, and community connection bringing brothers and partner organizations across the DMV together. Indoor and outdoor seating, DJ, and food on site. $10 purchase fee.",
+    image: "/image/event.jpg",
+    highlights: [
+      "Indoors & outdoors seating",
+      "DJ and live music",
+      "Food served on site",
+      "$10 purchase fee"
+    ],
+    status: "upcoming"
   }
 ];

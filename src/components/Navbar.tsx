@@ -34,6 +34,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     { id: 'about', label: 'About Us' },
     { id: 'services', label: 'Services' },
     { id: 'team', label: 'Our Team' },
+    { id: 'events', label: 'Events' },
     { id: 'booking', label: 'Booking' },
     { id: 'contact', label: 'Contact' },
   ];
@@ -54,12 +55,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-4 lg:gap-5">
           {/* Brand Logo */}
           <button
             id="nav-brand-logo"
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3.5 text-left group cursor-pointer focus:outline-none min-w-0 lg:min-w-max"
+            className="flex items-center gap-3.5 text-left group cursor-pointer focus:outline-none min-w-0 lg:min-w-max ml-[-4px]"
           >
             <img src="/image/logo.png" alt="Elite Vanguard Logo" className="flex-shrink-0 w-20 h-20 rounded-lg object-cover object-center transition-all duration-300 shadow-sm" />
             <div className="flex flex-col min-w-0 lg:min-w-max">
@@ -73,7 +74,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav id="desktop-nav-menu" className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+          <nav id="desktop-nav-menu" className="hidden lg:flex items-center gap-1 xl:gap-2 ml-[-2px]">
             {navLinks.map((link) => {
               const isActive = currentPage === link.id;
               return (

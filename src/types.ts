@@ -1,4 +1,4 @@
-export type PageId = 'home' | 'about' | 'services' | 'team' | 'booking' | 'contact';
+export type PageId = 'home' | 'about' | 'services' | 'team' | 'events' | 'booking' | 'contact';
 
 export interface TargetIndustry {
   id: string;
@@ -47,4 +47,19 @@ export interface ConsultationRequest {
   preferredDate: string;
   preferredTime: string;
   message: string;
+}
+
+export interface CommunityEvent {
+  id: string;
+  title: string;
+  organization: string;
+  role: string;
+  date: string;
+  time?: string;
+  location: string;
+  cause: string;
+  description: string;
+  image: string;
+  highlights?: string[];
+  status: 'upcoming' | 'past';
 }

@@ -8,12 +8,13 @@ import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { TeamPage } from './pages/TeamPage';
+import { EventsPage } from './pages/EventsPage';
 import { BookingPage } from './pages/BookingPage';
 import { ContactPage } from './pages/ContactPage';
 import { Calendar, Sparkles } from 'lucide-react';
 import { useLanguage } from './i18n/LanguageContext';
 
-const VALID_PAGES: PageId[] = ['home', 'about', 'services', 'team', 'booking', 'contact'];
+const VALID_PAGES: PageId[] = ['home', 'about', 'services', 'team', 'events', 'booking', 'contact'];
 
 const getPageFromPath = (): PageId => {
   const segment = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
@@ -101,6 +102,7 @@ export default function App() {
         {currentPage === 'about' && <AboutPage onNavigate={navigateTo} />}
         {currentPage === 'services' && <ServicesPage onNavigate={navigateTo} />}
         {currentPage === 'team' && <TeamPage onNavigate={navigateTo} />}
+        {currentPage === 'events' && <EventsPage onNavigate={navigateTo} />}
         {currentPage === 'booking' && <BookingPage onNavigate={navigateTo} />}
         {currentPage === 'contact' && <ContactPage onNavigate={navigateTo} />}
       </main>

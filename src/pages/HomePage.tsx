@@ -172,7 +172,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="lg:col-span-5 relative">
               <div className="relative border border-[#222222] p-2 bg-[#111111] rounded-xl shadow-2xl overflow-hidden">
                 <img
-                  src="https://www.shutterstock.com/image-photo/speaker-giving-talk-conference-hall-260nw-2653698805.jpg"
+                  src="/image/hortonimg.jpg"
                   alt="Operational Execution and Infrastructure"
                   className="w-full h-[400px] object-cover filter contrast-110 rounded-lg"
                 />

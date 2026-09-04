@@ -16,6 +16,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ page }) => {
       about: `${t('About Us')} | ${COMPANY_INFO.name} | ${t('Veteran-Led Leadership Development')}`,
       services: `${t('Services & Practice Areas')} | ${COMPANY_INFO.name}`,
       team: `${t('Executive Leadership Team')} | ${COMPANY_INFO.name}`,
+      events: `${t('Community Events & Non-Profit Involvement')} | ${COMPANY_INFO.name}`,
       booking: `${t('Book a Consultation')} | ${COMPANY_INFO.name}`,
       contact: `${t('Contact Us')} | ${COMPANY_INFO.name}`,
     };
@@ -25,6 +26,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ page }) => {
       about: `${t('Learn about')} ${COMPANY_INFO.legalName} ${t('— a veteran-led management consulting and leadership development firm dedicated to translating time-tested military principles into high-performance operational excellence.')}`,
       services: t('Explore practice areas: Leadership Development, Management Consulting, Operational Excellence, Frontline Leadership, Corporate Leadership Academies, and Strategic Execution.'),
       team: `${t('Meet the leadership of')} ${COMPANY_INFO.name}${t(', including Walter Horton (3rd U.S. Infantry Regiment / The Old Guard veteran) and Trevor McLeod (U.S. Army veteran & IBEW Local #3 Journeyperson).')}`,
+      events: t('Community events and non-profit initiatives supported by Elite Vanguard Leadership Group, including the Kings Men For Kidney Disease walk benefiting the National Kidney Foundation and the DMV Prince Hall Takeover.'),
       booking: `${t('Schedule a confidential executive consultation with')} ${COMPANY_INFO.name} ${t('to diagnose operational bottlenecks and bridge the strategy-to-execution gap.')}`,
       contact: `${t('Direct executive contact coordinates for')} ${COMPANY_INFO.name}. ${t('Connect with Walter via email.')}`,
     };
